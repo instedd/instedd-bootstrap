@@ -1,0 +1,5 @@
+copyright: Copyright (C) 2013, InSTEDD
+program_name: InSTEDD Bootstrap
+exclude:
+- spec/dummy/db/schema.db
+- spec/dummy/db/migrate/

@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   
   s.add_development_dependency 'haml-rails', '~> 0.4'
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "licit"
 end

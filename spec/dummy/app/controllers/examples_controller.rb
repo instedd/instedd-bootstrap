@@ -15,13 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with InSTEDD Bootstrap.  If not, see <http://www.gnu.org/licenses/>.
 
-Rails.application.routes.draw do
+class ExamplesController < ApplicationController
 
-  mount InsteddBootstrap::Engine => "/instedd-bootstrap"
-
-  get "home/index" => "home#index"
-  get "examples/:view" => "examples#show"
-
-  root to: 'home#index'
+  def show
+    render params[:view]
+  end
 
 end

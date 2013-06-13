@@ -7,13 +7,13 @@ require "instedd-bootstrap/version"
 Gem::Specification.new do |s|
   s.name        = "instedd-bootstrap"
   s.version     = InsteddBootstrap::VERSION
-  s.authors     = ["InSTEDD"]
-  s.email       = ["info@instedd.org"]
-  s.homepage    = "instedd.org"
+  s.authors     = ["Santiago Palladino", "Martin Scebba", "InSTEDD"]
+  s.email       = ["spalladino@manas.com.ar", "mscebba@manas.com.ar", "info@instedd.org"]
+  s.homepage    = "https://bitbucket.org/instedd/instedd-bootstrap"
   s.summary     = "Bootstrap theme for all InSTEDD platform applications"
   s.description = "InSTEDD Bootstrap is a mountable engine based on bootstrap-sass which provides a Bootstrap theme for all InSTEDD platform applications."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.2.13"
   s.add_dependency 'sass-rails', '~> 3.2'

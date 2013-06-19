@@ -57,3 +57,11 @@
 
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary
+
+// Theme Stylesheets
+@import "instedd-bootstrap/reset";
+@import "instedd-bootstrap/layout";
+@import "instedd-bootstrap/navmenu";
+@import "instedd-bootstrap/breadcrumb";
+@import "instedd-bootstrap/tables";
+@import "instedd-bootstrap/sprites";

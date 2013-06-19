@@ -18,6 +18,7 @@
 class HomeController < ApplicationController
 
   def index
+    @files = Dir["#{Rails.root}/app/views/examples/*.haml"].map{|p| File.basename(p, '.haml')}
   end
 
 end

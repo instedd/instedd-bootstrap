@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   mount InsteddBootstrap::Engine => "/instedd-bootstrap"
 
   get "home/index" => "home#index"
-  get "examples/:view" => "examples#show"
+  get "examples/:view" => "examples#show", as: 'example'
 
   root to: 'home#index'
 

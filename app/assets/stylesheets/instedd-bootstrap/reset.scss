@@ -12,3 +12,7 @@
   @include border-radius(0);
   @include box-shadow(none);
 }
+
+.btn-link {
+  text-decoration: none !important;
+}

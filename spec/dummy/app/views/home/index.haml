@@ -1,9 +1,11 @@
-.container
-  .hero-unit
-    %h1 Welcome to InSTEDD Bootstrap
-    %p InSTEDD Bootstrap is a Bootstrap theme for all InSTEDD applications.
-  .row
-    %h1 Samples
-    %ul
-      - @files.each do |file|
-        %li= link_to file.titleize, example_path(view: file)
+.container-fluid
+  .row-fluid
+    .span12
+      .hero-unit
+        %h1 Welcome to InSTEDD Bootstrap
+        %p InSTEDD Bootstrap is a Bootstrap theme for all InSTEDD applications.
+        %hr
+        %h1 Samples
+        %ul
+          - @files.each do |file|
+            %li= link_to file.titleize, example_path(view: file)

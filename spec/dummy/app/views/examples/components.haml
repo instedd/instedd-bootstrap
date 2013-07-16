@@ -1,0 +1,225 @@
+.span12
+  %h1 UI components
+
+  %hr
+
+  %h3 Breadcrumbs
+
+  .row-fluid
+    .span6
+      %ul.breadcrumb
+        %li 
+          %a{:href => "#"} Root
+        %li 
+          %a{:href => "#"} Item
+        %li.active 
+          %span
+          Detail
+
+  %hr
+  
+  %h3 State Display
+
+  .row-fluid
+    .span3
+      .StateDisplay
+        .values
+          .U
+            %span.big 8639
+            %span 0 messages
+        .action
+          %button
+            Download as CSV
+
+  .row-fluid
+    .span3
+      .StateDisplay
+        .values
+          .L
+            %span 30.75
+            %span remaining
+          .R
+            %span 69.25
+            %span used
+          %br{:style => "clear:both"}
+          .M
+            %span.Fill{:style => "width:30%"}
+        .action
+          %button.orange
+            Buy more credit
+
+  .row-fluid
+    .span3
+      .StateDisplay
+        .values.empty
+          .L
+            %span 0.00
+            %span no remaining credit
+          .R
+            %span
+          %br{:style => "clear:both"}
+          .M
+            %span
+        .action
+          %button.orange
+            Buy more credit
+
+  .row-fluid
+    .span3
+      .StateDisplay
+        .values
+          .L
+            %span 182
+            %span tasks done
+          .R
+            %span 14
+            %span pending
+          %br{:style => "clear:both"}
+          .M
+            %span.Fill{:style => "width:90%"}
+        .action
+          %button.orange
+            Start recruiting
+
+  .row-fluid
+    .span3
+      .StateDisplay
+        .values.done
+          .L
+            %span 196
+            %span tasks done
+          .R
+            %span
+          %br{:style => "clear:both"}
+          .M
+            %span
+        .action
+          %button.disabled
+            No pending tasks
+
+  %hr
+
+  %h3 Tabs
+
+  .row-fluid
+    .span12
+      .tabbable
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#tab1"} Tab1
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab2"} Tab2
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab3"} Tab3
+        .tab-content
+          #tab1.tab-pane.active
+            %p Section 1.
+          #tab2.tab-pane
+            %p Section 2.
+          #tab3.tab-pane
+            %p Section 3.
+
+  %br
+  %br
+
+
+  .row-fluid
+    .span12
+      .tabbable.tabs-below
+        .tab-content
+          #tab1b.tab-pane.active
+            %p Section 1.
+          #tab2b.tab-pane
+            %p Section 2.
+          #tab3b.tab-pane
+            %p Section 3.            
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#tab1b"} Tab1
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab2b"} Tab2
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab3b"} Tab3
+
+  %br
+  %br
+
+  .row-fluid
+    .span12
+      .tabbable.boxed
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#tab1c"} Tab1
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab2c"} Tab2
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab3c"} Tab3
+        .tab-content
+          #tab1c.tab-pane.active
+            %p Section 1.
+          #tab2c.tab-pane
+            %p Section 2.
+          #tab3c.tab-pane
+            %p Section 3.
+
+  %br
+  %br
+
+  .row-fluid
+    .span12
+      .tabbable.boxed.tabs-below
+        .tab-content
+          #tab1d.tab-pane.active
+            %p Section 1.
+          #tab2d.tab-pane
+            %p Section 2.
+          #tab3d.tab-pane
+            %p Section 3.            
+        %ul.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#tab1d"} Tab1
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab2d"} Tab2
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab3d"} Tab3
+
+
+  %hr
+
+  %h3 Steps Display
+
+  .row-fluid
+    .span12
+      .steps-line
+        %ul
+          %li.active
+            %span Step 1
+          %li.active
+            %span Step 2
+          %li
+            %span Step 3
+          %li
+            %span Step 4
+          %li
+            %span Step 5
+        .progress
+          %span{:style => "width:25%"}
+
+  %br
+
+  .row-fluid
+    .span6
+      .steps-line
+        %ul
+          %li.active
+            %span Step 1
+          %li.active
+            %span Step 2
+          %li.active
+            %span Step 3
+          %li.active
+            %span Step 4
+          %li.active
+            %span Step 5
+        .progress
+          %span{:style => "width:100%"}

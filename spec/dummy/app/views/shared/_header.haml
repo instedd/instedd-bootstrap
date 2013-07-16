@@ -1,0 +1,28 @@
+.navbar.top
+  .navbar-inner
+    .container-fluid
+      .row-fluid
+        .span3
+          %a{:href => root_url}
+            %img.brand{:src => "/assets/instedd-bootstrap/header/InSTEDDPlatform.png"}
+        .span6.acenter
+          .nav-collapse.collapse
+            %ul.NavMenu.tabbeable
+              - @files.each do |file|
+                %li= link_to file.titleize, example_path(view: file)
+        .span3
+          .pull-right
+            %a.btn-icon{:href => "#"}
+              %i.icf-settings
+            %a.btn-icon{:href => "#"}
+              %i.icf-configuration
+          .btn-group.pull-right
+            %a.btn.btn-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              John Doe
+              %span.caret
+            %ul.dropdown-menu
+              %li 
+                %a{:href => "#"} My Account
+              %li.divider
+              %li 
+                %a{:href => "#"} Log Out

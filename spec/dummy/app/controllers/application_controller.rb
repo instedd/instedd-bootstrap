@@ -17,4 +17,11 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
+  before_filter :load_files
+
+  def load_files
+    @files = Dir["#{Rails.root}/app/views/examples/*.haml"].map{|p| File.basename(p, '.haml')}
+  end
+
 end

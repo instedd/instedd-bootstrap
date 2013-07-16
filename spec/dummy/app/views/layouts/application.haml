@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Instedd Bootstrap
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .flash_message
+    .wrapper
+      = render "shared/header"
+      = yield :appheader
+      .content
+        .container-fluid
+          .row-fluid
+            = yield
+      = render "shared/footer"

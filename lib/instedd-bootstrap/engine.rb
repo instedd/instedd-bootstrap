@@ -18,5 +18,18 @@
 module InsteddBootstrap
   class Engine < ::Rails::Engine
     isolate_namespace InsteddBootstrap
+
+    if Rails.env.development?
+      config.to_prepare do
+        Rails.logger.debug "RELOADING InsteddBootstrap"
+        require_dependency InsteddBootstrap::Engine.root.join('app', 'helpers', 'instedd_bootstrap', 'application_helper').to_s
+      end
+
+      config.after_initialize do
+        # optional, without it will call `to_prepare` only when a file changes,
+        # not on every request
+        Rails.application.config.reload_classes_only_on_change = false
+      end
+    end
   end
 end

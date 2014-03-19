@@ -18,5 +18,7 @@
 require "instedd-bootstrap/engine"
 require "bootstrap-sass"
 
+require_relative "../app/helpers/instedd-bootstrap/application_helper"
+
 module InsteddBootstrap
 end

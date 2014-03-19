@@ -1,3 +1,7 @@
 = InSTEDD Bootstrap
 
 InSTEDD Bootstrap is a mountable engine based on bootstrap-sass which provides a Bootstrap theme for all InSTEDD platform applications.
+
+To run sample site:
+  cd spec/dummy
+  rails s

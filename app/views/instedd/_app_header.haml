@@ -1,0 +1,9 @@
+.app-header
+  .container-fluid
+    .row-fluid
+      .span3
+        %a{:href => "/"}
+          = content_for :app_logo
+      .span9
+        = content_for :app_header
+

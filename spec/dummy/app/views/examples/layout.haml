@@ -1,5 +1,8 @@
-- content_for :appheader do
-  = render "shared/appheader"
+- content_for :app_header do
+  - breadcrumb do
+    - breadcrumb_item 'Item 1', '#'
+    - breadcrumb_item 'Item 2', '#'
+    - breadcrumb_item 'Item 3'
 
 .content
   = yield

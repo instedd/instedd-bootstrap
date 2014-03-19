@@ -1,3 +1,9 @@
+- content_for :app_header do
+  - breadcrumb do
+    - breadcrumb_item 'Sample', '#'
+    - breadcrumb_item 'Sample', 'of breadcrumb'
+    - breadcrumb_item 'Nivel tres'
+
 .span12
   %h1 UI components
 
@@ -8,16 +14,16 @@
   .row-fluid
     .span6
       %ul.breadcrumb
-        %li 
+        %li
           %a{:href => "#"} Root
-        %li 
+        %li
           %a{:href => "#"} Item
-        %li.active 
+        %li.active
           %span
           Detail
 
   %hr
-  
+
   %h3 State Display
 
   .row-fluid
@@ -132,7 +138,7 @@
           #tab2b.tab-pane
             %p Section 2.
           #tab3b.tab-pane
-            %p Section 3.            
+            %p Section 3.
         %ul.nav.nav-tabs
           %li.active
             %a{"data-toggle" => "tab", :href => "#tab1b"} Tab1
@@ -174,7 +180,7 @@
           #tab2d.tab-pane
             %p Section 2.
           #tab3d.tab-pane
-            %p Section 3.            
+            %p Section 3.
         %ul.nav.nav-tabs
           %li.active
             %a{"data-toggle" => "tab", :href => "#tab1d"} Tab1

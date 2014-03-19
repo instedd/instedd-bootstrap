@@ -6,10 +6,10 @@
           %a{:href => root_url}
             %img.brand{:src => "/assets/instedd-bootstrap/header/InSTEDDPlatform.png"}
         .span6.acenter
-          .nav-collapse.collapse
-            %ul.NavMenu.tabbeable
-              - @files.each do |file|
-                %li= link_to file.titleize, example_path(view: file)
+          - if content_for?(:top_nav_bar)
+            .nav-collapse.collapse
+              %ul.NavMenu.tabbeable
+                = yield :top_nav_bar
         .span3
           .pull-right
             %a.btn-icon{:href => "#"}
@@ -21,8 +21,8 @@
               John Doe
               %span.caret
             %ul.dropdown-menu
-              %li 
+              %li
                 %a{:href => "#"} My Account
               %li.divider
-              %li 
+              %li
                 %a{:href => "#"} Log Out

@@ -14,6 +14,5 @@
         = render "instedd/app_header"
       .content
         .container-fluid
-          .row-fluid
-            = yield
+          = content_for?(:instedd_content) ? yield(:instedd_content) : yield
       = render "instedd/footer"

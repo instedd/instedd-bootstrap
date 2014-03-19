@@ -76,6 +76,14 @@ module InsteddBootstrap
     def dropdown_divider
       haml_tag :li, class: 'divider'
     end
+
+    def full_row
+      haml_tag :div, class: 'row-fluid' do
+        haml_tag :div, class: 'span12' do
+          yield
+        end
+      end
+    end
   end
 end
 

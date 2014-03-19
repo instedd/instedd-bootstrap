@@ -67,9 +67,9 @@ module InsteddBootstrap
       concat(render("instedd/controls/dropdown", text: text, body: body))
     end
 
-    def dropdown_item(text, path)
+    def dropdown_item(text, path, options={})
       haml_tag :li do
-        haml_concat link_to(text, path)
+        haml_concat link_to(text, path, options)
       end
     end
 

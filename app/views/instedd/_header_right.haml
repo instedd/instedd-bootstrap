@@ -1,0 +1,10 @@
+/ .pull-right
+/   %a.btn-icon{:href => "#"}
+/     %i.icf-settings
+/   %a.btn-icon{:href => "#"}
+/     %i.icf-configuration
+.btn-group.pull-right
+  - dropdown 'John Doe' do
+    - dropdown_item 'My Account', '#'
+    - dropdown_divider
+    - dropdown_item 'Logout', '#'

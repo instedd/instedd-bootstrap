@@ -14,13 +14,10 @@
     .row-fluid
       .span4
         %a{:href => "http://instedd.org"} © 2011 InSTEDD
-        %a{:href => "#TODO"} Terms and conditions
-        %a{:href => "#TODO"} Contact us
+        = render "instedd/footer_links_left"
       .span6.offset2.aright
-        %a{:href => "#"} Events
-        %a{:href => "#"} Volunteers
-        %a{:href => "#"} Members
-        %a#invite_bubble_trigger{:href => "#"} Invite new users
-        #invite_bubble_content
-        %span#version
-          Version: xxx
+        = render "instedd/footer_links_right"
+        - if content_for?(:app_version)
+          %span#version
+            Version:
+            = yield :app_version

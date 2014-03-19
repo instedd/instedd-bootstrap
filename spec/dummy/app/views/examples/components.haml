@@ -1,7 +1,7 @@
 - content_for :app_header do
   - breadcrumb do
     - breadcrumb_item 'Sample', '#'
-    - breadcrumb_item 'Sample', 'of breadcrumb'
+    - breadcrumb_item 'of breadcrumb', '#'
     - breadcrumb_item 'Nivel tres'
 
 .span12
@@ -13,14 +13,11 @@
 
   .row-fluid
     .span6
-      %ul.breadcrumb
-        %li
-          %a{:href => "#"} Root
-        %li
-          %a{:href => "#"} Item
-        %li.active
-          %span
-          Detail
+
+      - breadcrumb do
+        - breadcrumb_item 'Root', '#'
+        - breadcrumb_item 'Item', '#'
+        - breadcrumb_item 'Detail'
 
   %hr
 

@@ -61,6 +61,21 @@ module InsteddBootstrap
         haml_concat text
       end
     end
+
+    def dropdown(text, &block)
+      body = capture(&block)
+      concat(render("instedd/controls/dropdown", text: text, body: body))
+    end
+
+    def dropdown_item(text, path)
+      haml_tag :li do
+        haml_concat link_to(text, path)
+      end
+    end
+
+    def dropdown_divider
+      haml_tag :li, class: 'divider'
+    end
   end
 end
 

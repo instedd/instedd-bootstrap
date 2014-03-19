@@ -11,18 +11,4 @@
               %ul.NavMenu.tabbeable
                 = yield :top_nav_bar
         .span3
-          .pull-right
-            %a.btn-icon{:href => "#"}
-              %i.icf-settings
-            %a.btn-icon{:href => "#"}
-              %i.icf-configuration
-          .btn-group.pull-right
-            %a.btn.btn-link.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-              John Doe
-              %span.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "#"} My Account
-              %li.divider
-              %li
-                %a{:href => "#"} Log Out
+          = render "instedd/header_right"

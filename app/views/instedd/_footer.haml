@@ -10,7 +10,9 @@
       .span7
         %a.more.pull-right{:href => "http://instedd.org/technologies/"} Learn more
         %br
-        #instedd-footer.pull-right{"data-app-name" => "nuntium"}
+        - @instedd_app_name = capture do
+          = yield :app_name
+        #instedd-footer.pull-right{"data-app-name" => @instedd_app_name}
     .row-fluid
       .span4
         %a{:href => "http://instedd.org"} © 2011 InSTEDD

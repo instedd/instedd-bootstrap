@@ -64,28 +64,36 @@ body.smallfooter {
     margin:0 2px;
     &:hover {
       color:$black;
-    } 
+    }
   }
 
   #instedd-footer {
     .footer-next {
-      background-image: url(image-path("instedd-bootstrap/footer/next.png"));
+      background: url(image-path("instedd-bootstrap/footer/next.png")) transparent;
       float: right;
       width: 20px;
       height: 79px;
       position: relative;
       top: -80px;
       padding-left: 0px !important;
+      margin: 0;
+      &:hover {
+        right: -2px;
+      }
     }
 
     .footer-prev {
-      background-image: url(image-path("instedd-bootstrap/footer/previous.png"));
+      background: url(image-path("instedd-bootstrap/footer/previous.png")) transparent;
       float: left;
       width: 20px;
       height: 79px;
       position: relative;
       top: -80px;
       padding-left: 0px !important;
+      margin: 0;
+      &:hover {
+        left: -2px;
+      }
     }
 
     .jcarousel-clip, .jcarousel-container {

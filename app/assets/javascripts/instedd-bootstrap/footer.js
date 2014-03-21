@@ -9,6 +9,7 @@ var apps = [
   { id:'remindem', url:'http://remindem.instedd.org/', name:'Remindem'},
   { id:'reportingWheel', url:'http://reportingwheel.instedd.org/', name:'Reporting Wheel'},
   { id:'resourceMap', url:'http://resourcemap.instedd.org/', name:'Resource Map'},
+  { id:'mbuilder', url:'http://mbuilder.instedd.org/', name:'Mbuilder'},
   { id:'riff', url:'http://riff.instedd.org/', name:'Riff'},
   { id:'seentags', url:'http://seentags.instedd.org/', name:'Seentags'},
   { id:'taskMeUp', url:'http://taskmeup.instedd.org/', name:'Task Me Up'},

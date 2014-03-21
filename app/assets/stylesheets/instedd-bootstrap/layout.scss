@@ -189,6 +189,11 @@ body.smallfooter {
   #remindem a {
     background-image: url(image-path("instedd-bootstrap/footer/buttons/remindem.png"));
   }
+
+  #mbuilder a {
+    background-image: url(image-path("instedd-bootstrap/footer/buttons/mbuilder.png"));
+  }
+
   #version {
     margin-left: 1em;
     color: #777777;
@@ -297,7 +302,7 @@ a:hover {
 
 .well-plain {
   @extend .well;
-  @include box-shadow(none); 
+  @include box-shadow(none);
   padding: 5px;
   &.collapsed {
     background: none;
@@ -343,8 +348,8 @@ ul.clist {
         @extend .input;
       }
     }
-    .clist-add, 
-    .clist-remove, 
+    .clist-add,
+    .clist-remove,
     .handle {
       @extend .ic-plain;
       margin:0 0 .2em .3em;
@@ -407,7 +412,7 @@ ul.superblyTagItems  li{
 }
 
 
-.flash { 
+.flash {
   position: absolute;
   top: 0px;
   overflow: hidden;
@@ -420,7 +425,7 @@ ul.superblyTagItems  li{
   display: inline-block;
   border-radius: 0px 0px 5px 5px;
   position: relative;
-  margin: 0px 2px 2px 2px;  
+  margin: 0px 2px 2px 2px;
 }
 
 .flash_notice > div {
@@ -439,43 +444,43 @@ ul.superblyTagItems  li{
 /* ----- Wajbar ----- */
 textarea.ux-text { width: inherit; padding:2px 2px; resize:none; }
 
-.TaskBox { 
-  border: 1px solid #dddddd; 
-  background:$grayLighter; 
-  font-size:10px; 
-  font-weight: bold; 
-  letter-spacing:-0.05em; 
-  padding:0px 0px 1px 0px; 
-  margin:0px 1px 0 1px; 
-  text-align:center; 
+.TaskBox {
+  border: 1px solid #dddddd;
+  background:$grayLighter;
+  font-size:10px;
+  font-weight: bold;
+  letter-spacing:-0.05em;
+  padding:0px 0px 1px 0px;
+  margin:0px 1px 0 1px;
+  text-align:center;
   @include border-radius(3px);
   white-space:nowrap;
-  div { 
-    display: inline-block; 
-    vertical-align:middle; 
+  div {
+    display: inline-block;
+    vertical-align:middle;
     margin-left:-2px;
-    &.L { 
-      color:$grayDark; 
-      width:4%; 
-      text-align:left; 
-      padding-left:0px; 
+    &.L {
+      color:$grayDark;
+      width:4%;
+      text-align:left;
+      padding-left:0px;
     }
-    &.R { 
-      color:$orange; 
-      width:4%; 
-      text-align:right; 
-      padding-right:0px; 
+    &.R {
+      color:$orange;
+      width:4%;
+      text-align:right;
+      padding-right:0px;
     }
-    &.M { 
-      background:$orange; 
-      width:88%; 
-      margin:0 2px 
+    &.M {
+      background:$orange;
+      width:88%;
+      margin:0 2px
     }
-    span { 
-      background:$grayDark; 
-      height:4px; 
-      display:block; 
-      width:80% 
+    span {
+      background:$grayDark;
+      height:4px;
+      display:block;
+      width:80%
     }
   }
   &.readonly div.R { color:#d0d0d0; }
@@ -656,7 +661,7 @@ ul.nav-tabs a {
         }
         &:last-child:after {
           margin-left: -17px;
-        }        
+        }
       }
     }
   }

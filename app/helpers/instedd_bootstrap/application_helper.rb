@@ -77,6 +77,29 @@ module InsteddBootstrap
       haml_tag :li, class: 'divider'
     end
 
+    def simple_list(key, options = {}, &block)
+      create_path = options[:create_path]
+      title = options[:title] || t("#{key}.title", scope: [:instedd, :controls, :simple_list], default: key.to_s.humanize.pluralize.titleize)
+      icon_key = options[:icon] || key
+      if icon_key.is_a?(Symbol)
+        emptydata_style = "background: url(#{asset_path('instedd-bootstrap/icons/72/grey/' + icon_key.to_s + '.png')}) no-repeat center 40px !important;"
+      end
+
+      body = capture(&block) if block_given?
+      concat(render(layout: "instedd/controls/simple_list", locals: { key: key, title: title }) do
+        if body.present?
+          haml_concat body
+          concat render("instedd/controls/simple_list_item_create", key: key, path: create_path) if create_path
+        else
+          concat render("instedd/controls/simple_list_empty", key: key, path: create_path, emptydata_style: emptydata_style)
+        end
+      end)
+    end
+
+    def simple_list_item(text, path)
+      concat render("instedd/controls/simple_list_item", text: text, path: path)
+    end
+
     def full_row
       haml_tag :div, class: 'row-fluid' do
         haml_tag :div, class: 'span12' do

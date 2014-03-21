@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+
+  instedd:
+    controls:
+      simple_list:
+        application:
+          title: My Applications

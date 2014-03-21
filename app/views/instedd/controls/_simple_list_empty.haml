@@ -1,0 +1,10 @@
+%tr
+  %td.emptydata{style: emptydata_style}
+    - if path.present?
+      = link_to "You don't have any #{key.to_s.humanize.downcase.pluralize} yet", path
+      %a{:href => path}
+        .btn-icon.blue
+          %i.icc-add
+        = "Create #{key.to_s.humanize.downcase}"
+    - else
+      = "You don't have any #{key.to_s.humanize.downcase.pluralize} yet"

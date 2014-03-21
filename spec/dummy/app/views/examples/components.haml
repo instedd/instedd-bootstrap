@@ -226,3 +226,31 @@
             %span Step 5
         .progress
           %span{:style => "width:100%"}
+
+  %hr
+  %h3 Simple List
+
+  .row-fluid
+    .span6
+
+      - simple_list :application, icon: :folder, create_path: root_url do
+        - simple_list_item 'Item 1', root_url
+        - simple_list_item 'Item 1', root_url
+        - simple_list_item 'Item 1', root_url
+
+      - simple_list :application, icon: :folder, create_path: root_url do
+        - if false
+          %span not rendered content
+
+    .span6
+      - simple_list :big_reminder, icon: :pie do
+        - if false
+          - simple_list_item 'Item 1', root_url
+
+      - simple_list :reminder do
+        - if false
+          - simple_list_item 'Item 1', root_url
+
+      - simple_list :reminder, title: 'Awesome reminders' do
+        - if false
+          - simple_list_item 'Item 1', root_url

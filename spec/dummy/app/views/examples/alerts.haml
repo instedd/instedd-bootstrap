@@ -1,0 +1,44 @@
+%h1 Alerts sample
+
+%p
+  Use
+  %code flash.now[]=
+  or
+  %code flash[]=
+  with keys
+  %code :notice
+  ,
+  %code :error
+  or
+  %code :alert
+  \.
+
+%p
+  Those messages will appear automatically as the sample above.
+
+%p
+  Use
+  %code $.status.showError(msg[, timeout])
+  or
+  %code $.status.showNotice(msg[, timeout])
+  to display client side generated messages
+
+.row-fluid
+  .span2
+    %button.btn.btn-block(onclick="$.status.showError('Lorem ipsum dolor sit amet');") Show error
+  .span2
+    %button.btn.btn-block(onclick="$.status.showNotice('Lorem ipsum dolor sit amet');") Show notice
+
+%br
+
+.row-fluid
+  .span2
+    %button.btn.btn-block(onclick="$.status.showError('Lorem ipsum dolor sit amet', 1000);") Show autohide error
+  .span2
+    %button.btn.btn-block(onclick="$.status.showNotice('Lorem ipsum dolor sit amet', 1000);") Show autohide notice
+
+%br
+
+
+- 30.times do
+  %br

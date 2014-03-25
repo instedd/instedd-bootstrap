@@ -18,6 +18,9 @@
 class ExamplesController < ApplicationController
 
   def show
+    if params[:view] == 'alerts'
+      flash.now[:error] = 'Lorem ipsum dolor sit amet'
+    end
     render params[:view]
   end
 

@@ -86,10 +86,14 @@ module InsteddBootstrap
       end
 
       body = capture(&block) if block_given?
-      concat(render(layout: "instedd/controls/simple_list", locals: { key: key, title: title }) do
+      locals = {
+        key: key,
+        title: title,
+        create_path: body.present? ? create_path : nil
+      }
+      concat(render(layout: "instedd/controls/simple_list", locals: locals) do
         if body.present?
           haml_concat body
-          concat render("instedd/controls/simple_list_item_create", key: key, path: create_path) if create_path
         else
           concat render("instedd/controls/simple_list_empty", key: key, path: create_path, emptydata_style: emptydata_style)
         end

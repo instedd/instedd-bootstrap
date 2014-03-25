@@ -3,6 +3,11 @@
     %tr
       %th
         = title
+        - if create_path
+          %a.pull-right{:href => create_path}
+            = "Create #{key.to_s.humanize.downcase}"
+            .btn-icon.blue
+              %i.icc-add
   %tbody
     = yield
 

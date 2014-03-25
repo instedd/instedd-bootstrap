@@ -120,6 +120,16 @@ module InsteddBootstrap
       res
     end
 
+    def render_breadcrumbs
+      unless @breadcrumbs.nil? or @breadcrumbs.empty?
+        breadcrumb do
+          @breadcrumbs.each do |item|
+            breadcrumb_item item[:name], item[:url]
+          end
+        end
+      end
+    end
+
     def full_row
       haml_tag :div, class: 'row-fluid' do
         haml_tag :div, class: 'span12' do
@@ -129,5 +139,3 @@ module InsteddBootstrap
     end
   end
 end
-
-ActionController::Base.send(:helper, InsteddBootstrap::ApplicationHelper)

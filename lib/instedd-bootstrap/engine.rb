@@ -23,6 +23,7 @@ module InsteddBootstrap
       config.to_prepare do
         Rails.logger.debug "RELOADING InsteddBootstrap"
         require_dependency InsteddBootstrap::Engine.root.join('app', 'helpers', 'instedd_bootstrap', 'application_helper').to_s
+        require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'breadcrumbs').to_s
       end
 
       config.after_initialize do
@@ -30,6 +31,11 @@ module InsteddBootstrap
         # not on every request
         Rails.application.config.reload_classes_only_on_change = false
       end
+    end
+
+    config.to_prepare do
+      ActionController::Base.send :include, InsteddBootstrap::Breadcrumbs
+      ActionController::Base.send :helper, InsteddBootstrap::ApplicationHelper
     end
   end
 end

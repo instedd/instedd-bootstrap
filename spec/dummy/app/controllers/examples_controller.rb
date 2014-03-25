@@ -16,8 +16,11 @@
 # along with InSTEDD Bootstrap.  If not, see <http://www.gnu.org/licenses/>.
 
 class ExamplesController < ApplicationController
+  add_breadcrumb 'examples', :root_path
 
   def show
+    add_breadcrumb params[:view]
+
     if params[:view] == 'alerts'
       flash.now[:error] = 'Lorem ipsum dolor sit amet'
     end

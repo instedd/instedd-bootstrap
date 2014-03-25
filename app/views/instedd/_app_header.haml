@@ -5,5 +5,8 @@
         %a{:href => "/"}
           = content_for :app_logo
       .span9
-        = content_for :app_header
+        - if content_for?(:app_header)
+          = content_for :app_header
+        - else
+          - render_breadcrumbs
 

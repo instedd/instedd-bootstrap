@@ -134,6 +134,18 @@ module InsteddBootstrap
       end
     end
 
+    def icon_link_to(icon, body, url, html_options = {})
+      html_options[:class] = "button-icon #{html_options[:class]}"
+
+      link_to url, html_options do
+        haml_tag :div, class: 'btn-icon' do
+          haml_tag :i, class: icon do
+          end
+        end
+        haml_concat h(body)
+      end
+    end
+
     def full_row
       haml_tag :div, class: 'row-fluid' do
         haml_tag :div, class: 'span12' do

@@ -357,8 +357,21 @@ ul.clist {
   }
 }
 
+.box-list {
+  @include border-radius(5px);
+  @include box-shadow(1px 1px 3px 0px rgba(0,0,0,0.5));
+  @include box-sizing(border-box);
+  background: #d0d0d0;
+  padding: 10px;
+  margin-bottom: 10px;
 
-
+  P {
+    display: inline-block;
+    vertical-align: top;
+    width: 95%;
+    margin-left: 5PX;
+  }
+}
 
 .superblyTagfieldDiv {
   @extend .input;

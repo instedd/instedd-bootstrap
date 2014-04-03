@@ -108,6 +108,24 @@
     }
   }
 
+  &.graygrad {
+
+    tr {
+      th {
+        font-weight: normal;
+        color: #555555;
+        padding-bottom: 0;
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+        text-shadow:0px 1px 0px #ffffff;
+        @include gradient-vertical(#FFFFFF, #D0D0D0);
+        &:first-child {
+          border-left: 1px solid $tableBorder;
+        }
+      }
+    }
+  }
+
   &.availability {
     border-collapse: separate !important;
     border-spacing: 3px !important;

@@ -68,3 +68,5 @@ module InsteddBootstrap
     end
   end
 end
+
+ActionController::Base.send :include, InsteddBootstrap::Breadcrumbs

@@ -155,3 +155,5 @@ module InsteddBootstrap
     end
   end
 end
+
+ActionController::Base.send :helper, InsteddBootstrap::ApplicationHelper

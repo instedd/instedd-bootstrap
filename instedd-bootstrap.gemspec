@@ -15,11 +15,11 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "rails", "~> 3.2.13"
-  s.add_dependency 'sass-rails', '~> 3.2'
-  s.add_dependency 'bootstrap-sass', '~> 2.3.2'
-  
-  s.add_development_dependency 'haml-rails', '~> 0.4'
+  s.add_dependency "rails"
+  s.add_dependency 'sass-rails'
+  s.add_dependency 'bootstrap-sass'
+
+  s.add_development_dependency 'haml-rails'
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "licit"
 end

@@ -4,15 +4,15 @@
 .StateDisplay {
   @extend .well;
   font-size: 100%;
-  padding: 4px; 
-  color: #555555; 
+  padding: 4px;
+  color: #555555;
 
-  .values { 
-    font-size:75%; 
-    letter-spacing:-0.02em; 
-    line-height:95%; 
-    width:50%; 
-    padding: 2px 0; 
+  .values {
+    font-size:75%;
+    letter-spacing:-0.02em;
+    line-height:95%;
+    width:50%;
+    padding: 2px 0;
     white-space:nowrap;
     float: left;
 
@@ -20,30 +20,30 @@
       display: block;
     }
 
-    .L { 
-      color:#777777; 
-      text-align:left; 
-      padding-bottom:3px; 
-      margin-left:2px; 
-      float:left; 
+    .L {
+      color:#777777;
+      text-align:left;
+      padding-bottom:3px;
+      margin-left:2px;
+      float:left;
     }
 
-    .R { 
-      color:#f86808; 
-      text-align:right; 
-      padding-bottom:3px; 
+    .R {
+      color:#f86808;
+      text-align:right;
+      padding-bottom:3px;
       float:right;
     }
 
-    .M { 
-      background: #f86808; 
+    .M {
+      background: #f86808;
       margin-left:2px;
       float: none;
 
-      span { 
-        background:#777777; 
+      span {
+        background:#777777;
         height:4px;
-      } 
+      }
     }
 
     &.empty {
@@ -60,7 +60,7 @@
         &.M span {
           background: #f86808;
         }
-      } 
+      }
     }
 
     &.done {
@@ -70,8 +70,8 @@
     }
   }
 
-  .action { 
-    width:45%; 
+  .action {
+    width:45%;
     white-space:nowrap;
     float: right;
 
@@ -84,7 +84,7 @@
       &.orange {
         @extend .btn-warning;
       }
-    } 
+    }
   }
   @extend .clearfix;
 }

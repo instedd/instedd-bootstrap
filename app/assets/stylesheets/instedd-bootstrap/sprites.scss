@@ -317,3 +317,57 @@ $iconsCInsteddPath:          image-path("instedd-bootstrap/ics-color.png") !defa
 .icc-add                { background-position: 0        0; }
 .icc-remove             { background-position: -20px    0; }
 .icc-accept             { background-position: -40px    0; }
+
+
+//
+// Icons
+// --------------------------------------------------
+
+// 96 x 96
+// -------
+
+.i96 {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  line-height: 96px;
+  vertical-align: text-top;
+  background-repeat: no-repeat;
+
+  &.book {
+    background-image: url("instedd-bootstrap/icons/96/gradient/book.png");
+  }
+  &.chat {
+    background-image: url("instedd-bootstrap/icons/96/gradient/chat.png");
+  }
+  &.database {
+    background-image: url("instedd-bootstrap/icons/96/gradient/database.png");
+  }
+  &.diabetic {
+    background-image: url("instedd-bootstrap/icons/96/gradient/diabetic.png");
+  }
+  &.event {
+    background-image: url("instedd-bootstrap/icons/96/gradient/event.png");
+  }
+  &.folder {
+    background-image: url("instedd-bootstrap/icons/96/gradient/folder.png");
+  }
+  &.ok {
+    background-image: url("instedd-bootstrap/icons/96/gradient/ok.png");
+  }
+  &.pregnant {
+    background-image: url("instedd-bootstrap/icons/96/gradient/pregnant.png");
+  }
+  &.signature {
+    background-image: url("instedd-bootstrap/icons/96/gradient/signature.png");
+  }
+  &.social {
+    background-image: url("instedd-bootstrap/icons/96/gradient/social.png");
+  }
+  &.teach {
+    background-image: url("instedd-bootstrap/icons/96/gradient/teach.png");
+  }
+  &.vaccine {
+    background-image: url("instedd-bootstrap/icons/96/gradient/vaccine.png");
+  }
+}

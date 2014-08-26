@@ -142,7 +142,9 @@ module InsteddBootstrap
           haml_tag :i, class: icon do
           end
         end
-        haml_concat h(body)
+        haml_tag :span do
+          haml_concat h(body)
+        end
       end
     end
 

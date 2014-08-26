@@ -9,6 +9,11 @@ a.button-icon {
   &:hover, &:active {
     color:#ff6600
   }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 // FANCY

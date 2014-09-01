@@ -88,7 +88,7 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    sass (3.3.4)
+    sass (3.4.1)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -114,4 +114,5 @@ DEPENDENCIES
   instedd-bootstrap!
   jquery-rails
   licit
+  sass (= 3.4.1)
   sqlite3

@@ -248,3 +248,62 @@
       - simple_list :reminder, title: 'Awesome reminders' do
         - if false
           - simple_list_item 'Item 1', root_url
+
+  %hr
+  %h3 buttons
+
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Button
+        %th class=""
+        %th Description
+    %tbody
+      %tr
+        %td
+          %button.btn{:type => "button"} Default
+        %td
+          %code btn
+        %td Standard gray button with gradient
+      %tr
+        %td
+          %button.btn.btn-primary{:type => "button"} Primary
+        %td
+          %code btn btn-primary
+        %td Provides extra visual weight and identifies the primary action in a set of buttons
+      %tr
+        %td
+          %button.btn.btn-info{:type => "button"} Info
+        %td
+          %code btn btn-info
+        %td Used as an alternative to the default styles
+      %tr
+        %td
+          %button.btn.btn-success{:type => "button"} Success
+        %td
+          %code btn btn-success
+        %td Indicates a successful or positive action
+      %tr
+        %td
+          %button.btn.btn-warning{:type => "button"} Warning
+        %td
+          %code btn btn-warning
+        %td Indicates caution should be taken with this action
+      %tr
+        %td
+          %button.btn.btn-danger{:type => "button"} Danger
+        %td
+          %code btn btn-danger
+        %td Indicates a dangerous or potentially negative action
+      %tr
+        %td
+          %button.btn.btn-inverse{:type => "button"} Inverse
+        %td
+          %code btn btn-inverse
+        %td Alternate dark gray button, not tied to a semantic action or use
+      %tr
+        %td
+          %button.btn.btn-link{:type => "button"} Link
+        %td
+          %code btn btn-link
+        %td Deemphasize a button by making it look like a link while maintaining button behavior

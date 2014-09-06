@@ -18,7 +18,7 @@
   %h3 State Display
 
   .row-fluid
-    .span3
+    .span4
       .StateDisplay
         .values
           .U
@@ -29,7 +29,7 @@
             Download as CSV
 
   .row-fluid
-    .span3
+    .span4
       .StateDisplay
         .values
           .L
@@ -46,7 +46,7 @@
             Buy more credit
 
   .row-fluid
-    .span3
+    .span4
       .StateDisplay
         .values.empty
           .L
@@ -62,7 +62,7 @@
             Buy more credit
 
   .row-fluid
-    .span3
+    .span4
       .StateDisplay
         .values
           .L
@@ -79,7 +79,7 @@
             Start recruiting
 
   .row-fluid
-    .span3
+    .span4
       .StateDisplay
         .values.done
           .L
@@ -249,8 +249,9 @@
         - if false
           - simple_list_item 'Item 1', root_url
 
+  %br
   %hr
-  %h3 buttons
+  %h3 Buttons
 
   %table.table.table-bordered.table-striped
     %thead
@@ -264,7 +265,7 @@
           %button.btn{:type => "button"} Default
         %td
           %code btn
-        %td Standard gray button with gradient
+        %td Standard button with gradient
       %tr
         %td
           %button.btn.btn-primary{:type => "button"} Primary
@@ -273,16 +274,16 @@
         %td Provides extra visual weight and identifies the primary action in a set of buttons
       %tr
         %td
-          %button.btn.btn-info{:type => "button"} Info
-        %td
-          %code btn btn-info
-        %td Used as an alternative to the default styles
-      %tr
-        %td
           %button.btn.btn-success{:type => "button"} Success
         %td
           %code btn btn-success
         %td Indicates a successful or positive action
+      %tr
+        %td
+          %button.btn.btn-info{:type => "button"} Info
+        %td
+          %code btn btn-info
+        %td Used as an alternative to the default styles
       %tr
         %td
           %button.btn.btn-warning{:type => "button"} Warning
@@ -307,3 +308,367 @@
         %td
           %code btn btn-link
         %td Deemphasize a button by making it look like a link while maintaining button behavior
+
+
+
+
+
+  %br
+  %hr
+  %h3 Other Buttons Sizes
+
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Button
+        %th class=""
+        %th Description
+    %tbody
+      %tr
+        %td
+          %button.btn-mini{:type => "button"} Default Mini
+        %td
+          %code btn-mini
+        %td Standard button mini size
+      %tr
+        %td
+          %button.btn-mini.btn-primary{:type => "button"} Primary Mini
+        %td
+          %code btn-mini btn-primary
+        %td Primary button mini size
+      %tr
+        %td
+          %button.btn-mini.btn-success{:type => "button"} Success Mini
+        %td
+          %code btn-mini btn-success
+        %td Success button mini size
+      %tr
+        %td
+          %button.btn-mini.btn-info{:type => "button"} Info Mini
+        %td
+          %code btn-mini btn-info
+        %td Info button mini size
+      %tr
+        %td
+          %button.btn-mini.btn-warning{:type => "button"} Warning Mini
+        %td
+          %code btn-mini btn-warning
+        %td Warning button mini size
+      %tr
+        %td
+          %button.btn-mini.btn-danger{:type => "button"} Danger Mini
+        %td
+          %code btn-mini btn-danger
+        %td Danger button mini size
+      %tr
+        %td
+          %button.btn-mini.btn-inverse{:type => "button"} Inverse Mini
+        %td
+          %code btn-mini btn-inverse
+        %td Inverse button mini size
+      %tr
+        %td
+          %button.btn-small{:type => "button"} Default Small
+        %td
+          %code btn-small
+        %td Standard button small size
+      %tr
+        %td
+          %button.btn-small.btn-primary{:type => "button"} Primary Small
+        %td
+          %code btn-small btn-primary
+        %td Primary button small size
+      %tr
+        %td
+          %button.btn-small.btn-success{:type => "button"} Success Small
+        %td
+          %code btn-small btn-success
+        %td Success button small size
+      %tr
+        %td
+          %button.btn-small.btn-info{:type => "button"} Info Small
+        %td
+          %code btn-small btn-info
+        %td Info button small size
+      %tr
+        %td
+          %button.btn-small.btn-warning{:type => "button"} Warning Small
+        %td
+          %code btn-small btn-warning
+        %td Warning button small size
+      %tr
+        %td
+          %button.btn-small.btn-danger{:type => "button"} Danger Small
+        %td
+          %code btn-small btn-danger
+        %td Danger button small size
+      %tr
+        %td
+          %button.btn-small.btn-inverse{:type => "button"} Inverse Small
+        %td
+          %code btn-small btn-inverse
+        %td Inverse button small size
+      %tr
+        %td
+          %button.btn-large{:type => "button"} Default Large
+        %td
+          %code btn-large
+        %td Standard button large size
+      %tr
+        %td
+          %button.btn-large.btn-primary{:type => "button"} Primary Large
+        %td
+          %code btn-large btn-primary
+        %td Primary button large size
+      %tr
+        %td
+          %button.btn-large.btn-success{:type => "button"} Success Large
+        %td
+          %code btn-large btn-success
+        %td Success button large size
+      %tr
+        %td
+          %button.btn-large.btn-info{:type => "button"} Info Large
+        %td
+          %code btn-large btn-info
+        %td Info button large size
+      %tr
+        %td
+          %button.btn-large.btn-warning{:type => "button"} Warning Large
+        %td
+          %code btn-large btn-warning
+        %td Warning button large size
+      %tr
+        %td
+          %button.btn-large.btn-danger{:type => "button"} Danger Large
+        %td
+          %code btn-large btn-danger
+        %td Danger button large size
+      %tr
+        %td
+          %button.btn-large.btn-inverse{:type => "button"} Inverse Large
+        %td
+          %code btn-large btn-inverse
+        %td Inverse button large size
+      %tr
+        %td
+          %button.btn-block{:type => "button"} Default Block
+        %td
+          %code btn-block
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+      %tr
+        %td
+          %button.btn-block.btn-primary{:type => "button"} Primary Block
+        %td
+          %code btn-block btn-primary
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+      %tr
+        %td
+          %button.btn-block.btn-success{:type => "button"} Success Block
+        %td
+          %code btn-block btn-success
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+      %tr
+        %td
+          %button.btn-block.btn-info{:type => "button"} Info Block
+        %td
+          %code btn-block btn-info
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+      %tr
+        %td
+          %button.btn-block.btn-warning{:type => "button"} Warning Block
+        %td
+          %code btn-block btn-warning
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+      %tr
+        %td
+          %button.btn-block.btn-danger{:type => "button"} Danger Block
+        %td
+          %code btn-block btn-danger
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+      %tr
+        %td
+          %button.btn-block.btn-inverse{:type => "button"} Inverse Block
+        %td
+          %code btn-block btn-inverse
+        %td Width 100% (combinable with other sizes eg: 'btn-large')
+
+
+  / %hr
+  / %h3 Buttons
+
+  / %table.table.table-bordered.table-striped
+  /   %thead
+  /     %tr
+  /       %th Button
+  /       %th class=""
+  /       %th Description
+  /   %tbody
+  /     %tr
+  /       %td
+  /         %button.bn{:type => "button"} Default
+  /       %td
+  /         %code bn
+  /       %td Standard button with gradient
+  /     %tr
+  /       %td
+  /         %button.bn.blue{:type => "button"} Blue
+  /       %td
+  /         %code bn blue
+  /       %td Blue button with gradient
+  /     %tr
+  /       %td
+  /         %button.bn.orange{:type => "button"} Orange
+  /       %td
+  /         %code bn orange
+  /       %td Orange button with gradient
+  /     %tr
+  /       %td
+  /         %button.bn.green{:type => "button"} Green
+  /       %td
+  /         %code bn green
+  /       %td Green button with gradient
+  /     %tr
+  /       %td
+  /         %button.bn.gray{:type => "button"} Gray
+  /       %td
+  /         %code bn gray
+  /       %td Dark gray button with gradient
+  /     %tr
+  /       %td
+  /         %button.bn.link{:type => "button"} Link
+  /       %td
+  /         %code bn link
+  /       %td Deemphasize a button by making it look like a link while maintaining button behavior
+
+  / %br
+  / %hr
+  / %h3 Other buttons sizes
+
+  / %table.table.table-bordered.table-striped
+  /   %thead
+  /     %tr
+  /       %th Button
+  /       %th class=""
+  /       %th Description
+  /   %tbody
+  /     %tr
+  /       %td
+  /         %button.bn-mini{:type => "button"} Default
+  /       %td
+  /         %code bn-mini
+  /       %td Standard button with gradient mini size
+  /     %tr
+  /       %td
+  /         %button.bn-mini.blue{:type => "button"} Blue
+  /       %td
+  /         %code bn-mini blue
+  /       %td Blue button with gradient mini size
+  /     %tr
+  /       %td
+  /         %button.bn-mini.orange{:type => "button"} Orange
+  /       %td
+  /         %code bn-mini orange
+  /       %td Orange button with gradient mini size
+  /     %tr
+  /       %td
+  /         %button.bn-mini.green{:type => "button"} Green
+  /       %td
+  /         %code bn-mini green
+  /       %td Green button with gradient mini size
+  /     %tr
+  /       %td
+  /         %button.bn-mini.gray{:type => "button"} Gray
+  /       %td
+  /         %code bn-mini gray
+  /       %td Dark gray button with gradient mini size
+  /     %tr
+  /       %td
+  /         %button.bn-small{:type => "button"} Default
+  /       %td
+  /         %code bn-small
+  /       %td Standard button with gradient small size
+  /     %tr
+  /       %td
+  /         %button.bn-small.blue{:type => "button"} Blue
+  /       %td
+  /         %code bn-small blue
+  /       %td Blue button with gradient small size
+  /     %tr
+  /       %td
+  /         %button.bn-small.orange{:type => "button"} Orange
+  /       %td
+  /         %code bn-small orange
+  /       %td Orange button with gradient small size
+  /     %tr
+  /       %td
+  /         %button.bn-small.green{:type => "button"} Green
+  /       %td
+  /         %code bn-small green
+  /       %td Green button with gradient small size
+  /     %tr
+  /       %td
+  /         %button.bn-small.gray{:type => "button"} Gray
+  /       %td
+  /         %code bn-small gray
+  /       %td Dark gray button with gradient small size
+  /     %tr
+  /       %td
+  /         %button.bn-large{:type => "button"} Default
+  /       %td
+  /         %code bn-large
+  /       %td Standard button with gradient large size
+  /     %tr
+  /       %td
+  /         %button.bn-large.blue{:type => "button"} Blue
+  /       %td
+  /         %code bn-large blue
+  /       %td Blue button with gradient large size
+  /     %tr
+  /       %td
+  /         %button.bn-large.orange{:type => "button"} Orange
+  /       %td
+  /         %code bn-large orange
+  /       %td Orange button with gradient large size
+  /     %tr
+  /       %td
+  /         %button.bn-large.green{:type => "button"} Green
+  /       %td
+  /         %code bn-large green
+  /       %td Green button with gradient large size
+  /     %tr
+  /       %td
+  /         %button.bn-large.gray{:type => "button"} Gray
+  /       %td
+  /         %code bn-large gray
+  /       %td Dark gray button with gradient large size
+  /     %tr
+  /       %td
+  /         %button.bn-block{:type => "button"} Default
+  /       %td
+  /         %code bn-block
+  /       %td Standard button with gradient width 100% (combinable with other sizes eg: 'bn-large')
+  /     %tr
+  /       %td
+  /         %button.bn-block.blue{:type => "button"} Blue
+  /       %td
+  /         %code bn-block blue
+  /       %td Blue button with gradient width 100% (combinable with other sizes eg: 'bn-large')
+  /     %tr
+  /       %td
+  /         %button.bn-block.orange{:type => "button"} Orange
+  /       %td
+  /         %code bn-block orange
+  /       %td Orange button with gradient width 100% (combinable with other sizes eg: 'bn-large')
+  /     %tr
+  /       %td
+  /         %button.bn-block.green{:type => "button"} Green
+  /       %td
+  /         %code bn-block green
+  /       %td Green button with gradient width 100% (combinable with other sizes eg: 'bn-large')
+  /     %tr
+  /       %td
+  /         %button.bn-block.gray{:type => "button"} Gray
+  /       %td
+  /         %code bn-block gray
+  /       %td Dark gray button with gradient width 100% (combinable with other sizes eg: 'bn-large')

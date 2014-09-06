@@ -13,31 +13,111 @@
   @include box-shadow(none);
 }
 
-
-.btn {
-  @include border-radius(3px);
-  @include gradient-vertical(#d0d0d0, #ffffff);
-  @include box-shadow(0.5px 0.866px 3px 0px rgba( 0, 0, 0, 0.5 ));
-  text-shadow: 0.5px 0.866px 0px rgb( 255, 255, 255 );
-  line-height: 20px;
-  border: 1px solid $white;
-  padding: 5px 14px;
-}
-.btn-link {
-  @include box-shadow(none);
-  text-shadow: none;
-  text-decoration: none !important;
-  background: none;
-  border: none;
-  color: #555555;
-}
-.btn-warning {
-  @include gradient-vertical(#ff6600, #fe973a);
-  color: $white;
-  border-color: #fe3700;
-  text-shadow: 0px -1px 0px rgb( 255, 104, 2 );
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
+
+
+//
+// Buttons Override
+// --------------------------------------------------
+
+// Core
+.btn {
+  @include border-radius(3px);
+  @include box-shadow(0.5px 0.866px 3px 0px rgba( 0, 0, 0, 0.5 ));
+  border: 1px solid $white;
+  padding: 5px 14px;
+  font-size: 14px;
+  line-height: 20px;
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    background-position: 0 -15px;
+
+  }
+}
+
+
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-large {
+  @extend .btn;
+  padding: $paddingLarge;
+  font-size: $fontSizeLarge;
+  @include border-radius($borderRadiusLarge);
+}
+
+// Small
+.btn-small {
+  @extend .btn;
+  padding: $paddingSmall;
+  font-size: $fontSizeSmall;
+  @include border-radius($borderRadiusSmall);
+}
+
+// Mini
+.btn-mini {
+  @extend .btn;
+  padding: $paddingMini;
+  font-size: $fontSizeMini;
+  @include border-radius($borderRadiusSmall);
+}
+
+
+// Block button
+// -------------------------
+
+.btn-block {
+  @extend .btn;
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  border-color: darken($btnPrimaryBackground, 10%);
+}
+// Success appears as green
+.btn-success {
+  border-color: darken($btnSuccessBackground, 10%);
+}
+// Info appears as a neutral blue
+.btn-info {
+  border-color: darken($btnInfoBackground, 10%);
+}
+// Warning appears are orange
+.btn-warning {
+  border-color: darken($btnWarningBackground, 10%);
+}
+// Danger and error appear as red
+.btn-danger {
+  border-color: darken($btnDangerBackground, 10%);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  border-color: darken($btnInverseBackground, 10%);
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+.btn-link {
+  @include box-shadow(none);
+  @include border-radius(none);
+  background: none;
+  text-shadow: none;
+  border: none;
+  color: #555555 !important;
+}
+

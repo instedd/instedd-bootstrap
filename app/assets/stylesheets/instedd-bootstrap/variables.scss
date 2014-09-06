@@ -2,3 +2,71 @@
 $heroUnitHeadingColor:    #006400;
 $baseLineHeight:          16px;
 $navbarHeight:            33px;
+
+// Grays
+// -------------------------
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #333;
+$gray:                  #555;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$white:                 #fff;
+
+// Accent colors
+// -------------------------
+$blue:                  #0376A6;
+$blueDark:              #034A68;
+$green:                 #428A42;
+$red:                   #9d261d;
+$yellow:                #ffc40d;
+$orange:                #e95f02;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+
+
+
+// Bootstrap Buttons
+// -------------------------
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         #ccc;
+
+@btnPrimaryBackground:              #174CB6;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @grayDarker;
+
+
+
+// Buttons
+// -------------------------
+$bnBackground:                     $white;
+$bnBackgroundHighlight:            darken($bnBackground, 14%);
+$bnBorder:                         $white;
+
+$bnBlueBackground:                 lighten($blue, 15%);
+$bnBlueBackgroundHighlight:        $blue;
+
+$bnOrangeBackground:               lighten($orange, 15%);
+$bnOrangeBackgroundHighlight:      $orange;
+
+$bnGreenBackground:                lighten($green, 15%);
+$bnGreenBackgroundHighlight:       $green;
+
+$bnGrayBackground:                 lighten($grayDark, 25%);
+$bnGrayBackgroundHighlight:        $grayDark;
+

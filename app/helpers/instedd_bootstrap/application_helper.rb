@@ -138,7 +138,7 @@ module InsteddBootstrap
       html_options[:class] = "button-icon #{html_options[:class]}"
 
       link_to url, html_options do
-        haml_tag :div, class: 'btn-icon' do
+        haml_tag :span, class: 'btn-icon' do
           haml_tag :i, class: icon do
           end
         end

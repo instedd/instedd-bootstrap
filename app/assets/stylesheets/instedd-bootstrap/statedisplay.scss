@@ -76,10 +76,10 @@
     float: right;
 
     button, a {
-      @extend .btn;
       @extend .btn-large;
       @extend .btn-block;
       font-size: 100%;
+      padding: 11px 8px;
 
       &.orange {
         @extend .btn-warning;

@@ -249,6 +249,7 @@
         - if false
           - simple_list_item 'Item 1', root_url
 
+
   %br
   %hr
   %h3 Buttons
@@ -493,182 +494,27 @@
           %code btn-block btn-inverse
         %td Width 100% (combinable with other sizes eg: 'btn-large')
 
+  %br
+  %hr
 
-  / %hr
-  / %h3 Buttons
+  .row-fluid
+    .span12
+      %h3 Carrousel for home page
 
-  / %table.table.table-bordered.table-striped
-  /   %thead
-  /     %tr
-  /       %th Button
-  /       %th class=""
-  /       %th Description
-  /   %tbody
-  /     %tr
-  /       %td
-  /         %button.bn{:type => "button"} Default
-  /       %td
-  /         %code bn
-  /       %td Standard button with gradient
-  /     %tr
-  /       %td
-  /         %button.bn.blue{:type => "button"} Blue
-  /       %td
-  /         %code bn blue
-  /       %td Blue button with gradient
-  /     %tr
-  /       %td
-  /         %button.bn.orange{:type => "button"} Orange
-  /       %td
-  /         %code bn orange
-  /       %td Orange button with gradient
-  /     %tr
-  /       %td
-  /         %button.bn.green{:type => "button"} Green
-  /       %td
-  /         %code bn green
-  /       %td Green button with gradient
-  /     %tr
-  /       %td
-  /         %button.bn.gray{:type => "button"} Gray
-  /       %td
-  /         %code bn gray
-  /       %td Dark gray button with gradient
-  /     %tr
-  /       %td
-  /         %button.bn.link{:type => "button"} Link
-  /       %td
-  /         %code bn link
-  /       %td Deemphasize a button by making it look like a link while maintaining button behavior
-
-  / %br
-  / %hr
-  / %h3 Other buttons sizes
-
-  / %table.table.table-bordered.table-striped
-  /   %thead
-  /     %tr
-  /       %th Button
-  /       %th class=""
-  /       %th Description
-  /   %tbody
-  /     %tr
-  /       %td
-  /         %button.bn-mini{:type => "button"} Default
-  /       %td
-  /         %code bn-mini
-  /       %td Standard button with gradient mini size
-  /     %tr
-  /       %td
-  /         %button.bn-mini.blue{:type => "button"} Blue
-  /       %td
-  /         %code bn-mini blue
-  /       %td Blue button with gradient mini size
-  /     %tr
-  /       %td
-  /         %button.bn-mini.orange{:type => "button"} Orange
-  /       %td
-  /         %code bn-mini orange
-  /       %td Orange button with gradient mini size
-  /     %tr
-  /       %td
-  /         %button.bn-mini.green{:type => "button"} Green
-  /       %td
-  /         %code bn-mini green
-  /       %td Green button with gradient mini size
-  /     %tr
-  /       %td
-  /         %button.bn-mini.gray{:type => "button"} Gray
-  /       %td
-  /         %code bn-mini gray
-  /       %td Dark gray button with gradient mini size
-  /     %tr
-  /       %td
-  /         %button.bn-small{:type => "button"} Default
-  /       %td
-  /         %code bn-small
-  /       %td Standard button with gradient small size
-  /     %tr
-  /       %td
-  /         %button.bn-small.blue{:type => "button"} Blue
-  /       %td
-  /         %code bn-small blue
-  /       %td Blue button with gradient small size
-  /     %tr
-  /       %td
-  /         %button.bn-small.orange{:type => "button"} Orange
-  /       %td
-  /         %code bn-small orange
-  /       %td Orange button with gradient small size
-  /     %tr
-  /       %td
-  /         %button.bn-small.green{:type => "button"} Green
-  /       %td
-  /         %code bn-small green
-  /       %td Green button with gradient small size
-  /     %tr
-  /       %td
-  /         %button.bn-small.gray{:type => "button"} Gray
-  /       %td
-  /         %code bn-small gray
-  /       %td Dark gray button with gradient small size
-  /     %tr
-  /       %td
-  /         %button.bn-large{:type => "button"} Default
-  /       %td
-  /         %code bn-large
-  /       %td Standard button with gradient large size
-  /     %tr
-  /       %td
-  /         %button.bn-large.blue{:type => "button"} Blue
-  /       %td
-  /         %code bn-large blue
-  /       %td Blue button with gradient large size
-  /     %tr
-  /       %td
-  /         %button.bn-large.orange{:type => "button"} Orange
-  /       %td
-  /         %code bn-large orange
-  /       %td Orange button with gradient large size
-  /     %tr
-  /       %td
-  /         %button.bn-large.green{:type => "button"} Green
-  /       %td
-  /         %code bn-large green
-  /       %td Green button with gradient large size
-  /     %tr
-  /       %td
-  /         %button.bn-large.gray{:type => "button"} Gray
-  /       %td
-  /         %code bn-large gray
-  /       %td Dark gray button with gradient large size
-  /     %tr
-  /       %td
-  /         %button.bn-block{:type => "button"} Default
-  /       %td
-  /         %code bn-block
-  /       %td Standard button with gradient width 100% (combinable with other sizes eg: 'bn-large')
-  /     %tr
-  /       %td
-  /         %button.bn-block.blue{:type => "button"} Blue
-  /       %td
-  /         %code bn-block blue
-  /       %td Blue button with gradient width 100% (combinable with other sizes eg: 'bn-large')
-  /     %tr
-  /       %td
-  /         %button.bn-block.orange{:type => "button"} Orange
-  /       %td
-  /         %code bn-block orange
-  /       %td Orange button with gradient width 100% (combinable with other sizes eg: 'bn-large')
-  /     %tr
-  /       %td
-  /         %button.bn-block.green{:type => "button"} Green
-  /       %td
-  /         %code bn-block green
-  /       %td Green button with gradient width 100% (combinable with other sizes eg: 'bn-large')
-  /     %tr
-  /       %td
-  /         %button.bn-block.gray{:type => "button"} Gray
-  /       %td
-  /         %code bn-block gray
-  /       %td Dark gray button with gradient width 100% (combinable with other sizes eg: 'bn-large')
+      - feature_carrousel do
+        / - feature_carrousel_item 'Design', image: image_path('instedd-bootstrap/header/logos/watchfire.png') do
+        /   Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 1', image_class: 'icfl-database' do
+          Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 2', image_class: 'icfl-cloud' do
+          Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 3', image_class: 'icfl-directions' do
+          Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 4', image_class: 'icfl-robot' do
+          Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 5', image_class: 'icfl-building' do
+          Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 6', image_class: 'icfl-bug' do
+          Lorem ipsum dolor sit amet
+        - feature_carrousel_item 'Feature 7', image_class: 'icfl-test' do
+          Lorem ipsum dolor sit amet

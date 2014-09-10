@@ -1,0 +1,95 @@
+//
+// Features Carrousel
+// --------------------------------------------------
+.features-container {
+  @include box-sizing(border-box);
+  @include border-radius(4px);
+  background: #dddddd;
+  padding: 10px 40px;
+  margin: 50px auto;
+  width: 915px;
+  position: relative;
+
+  .jcarousel-clip {
+    @include border-radius(6px);
+    @include gradient-vertical(#ffffff, #d0d0d0);
+    @include box-shadow(0 1px 4px 0px rgba(0, 0, 0, 0.3));
+    border: 1px solid #ffffff;
+    overflow: hidden;
+  }
+
+  li {
+    @include box-sizing(border-box);
+    width: 208px;
+    height: 80px;
+    padding: 5px;
+    border-right: 1px solid #e2e2e2;
+    border-left: 1px solid #ececec;
+
+    img,
+    i {
+      max-width: 48px;
+      margin-top: 5px;
+      float: left;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      margin: 0;
+      padding-left: 52px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 14px;
+      padding-left: 52px;
+    }
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  .prev {
+    position: absolute;
+    left: -30px;
+    top: 30px;
+
+    a {
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 20px 10px 0;
+      border-color: transparent #000000 transparent transparent;
+    }
+    &.jcarousel-prev-disabled {
+      opacity: .3;
+      a {
+        cursor: default;
+      }
+    }
+  }
+  .next {
+    position: absolute;
+    right: -30px;
+    top: 30px;
+
+    a {
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 0 10px 20px;
+      border-color: transparent transparent transparent #000000;
+    }
+    &.jcarousel-next-disabled {
+      opacity: .3;
+      a {
+        cursor: default;
+      }
+    }
+  }
+}

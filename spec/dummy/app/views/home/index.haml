@@ -10,3 +10,11 @@
         %ul
           - @files.each do |file|
             %li= link_to file.titleize, example_path(view: file)
+
+  .row-fluid
+    .span12
+      - feature_carrousel do
+        - feature_carrousel_item 'Design', image: image_path('/assets/instedd-bootstrap/header/logos/watchfire.png') do
+          your SMS application in minutes without programming
+        - feature_carrousel_item 'Design', image_class: 'icfl-cloud' do
+          your SMS application in minutes without programming

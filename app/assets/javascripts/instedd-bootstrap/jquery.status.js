@@ -65,7 +65,7 @@ $.status.showError(msg, [kind]);
       // sets the flash message on the appropriate position and shows it
       _set_position: function(dom) {
         var header = $(".app-header");
-        var y = header.offset().top + header.height() + 17;
+        var y = header.offset().top + header.height() + 31;
         var scrollY = $(window).scrollTop();
         dom.css('left', (($(document).width() - dom.outerWidth()) / 2) + 'px');
         if ( scrollY > y) {

@@ -62,6 +62,34 @@ module InsteddBootstrap
       end
     end
 
+    def feature_carrousel
+      haml_tag :div, class: 'features-container' do
+        haml_tag :ul do
+          yield
+        end
+      end
+    end
+
+    def feature_carrousel_item(title, options)
+      haml_tag :li do
+        if options[:image]
+          haml_tag :img, src: options[:image]
+        end
+
+        if options[:image_class]
+          haml_tag :i, class: options[:image_class]
+        end
+
+        haml_tag :h3, :< do
+          concat title
+        end
+
+        haml_tag :p, :< do
+          yield
+        end
+      end
+    end
+
     def dropdown(text, &block)
       body = capture(&block)
       concat(render("instedd/controls/dropdown", text: text, body: body))

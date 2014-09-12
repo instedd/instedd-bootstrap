@@ -4,5 +4,15 @@
     - breadcrumb_item 'Item 2', '#'
     - breadcrumb_item 'Item 3'
 
-.content
-  = yield
+%h1 Sample layouts
+%br
+
+.row-fluid
+  .span3
+    - simple_list 'Layouts' do
+      - simple_list_item 'fullwidth', example_path(view: 'layout/fullwidth')
+      - simple_list_item 'fixed width centred', example_path(view: 'layout/centred')
+      - simple_list_item 'noheader', example_path(view: 'layout/noheader')
+      - simple_list_item 'noheader + fixed width centred', example_path(view: 'layout/noheader_centred')
+
+

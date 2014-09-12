@@ -17,6 +17,10 @@
 
 module InsteddBootstrap
   module ApplicationHelper
+    def add_body_class(css_class)
+      @body_class = "#{css_class} #{@body_class}"
+    end
+
     def top_nav_bar
       content_for :top_nav_bar do
         yield

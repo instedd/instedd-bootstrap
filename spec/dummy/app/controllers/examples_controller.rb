@@ -19,11 +19,18 @@ class ExamplesController < ApplicationController
   add_breadcrumb 'examples', :root_path
 
   def show
-    add_breadcrumb params[:view]
+    params[:view].split('/').each do |part|
+      add_breadcrumb part, example_path(part)
+    end
 
     if params[:view] == 'alerts'
       flash.now[:error] = 'Lorem ipsum dolor sit amet'
     end
+
+    # in order to support samples inside folders we need
+    # to add the examples folder for lookup
+    prepend_view_path "app/views/examples"
+
     render params[:view]
   end
 

@@ -191,3 +191,4 @@ module InsteddBootstrap
 end
 
 ActionController::Base.send :helper, InsteddBootstrap::ApplicationHelper
+ActionController::Base.send :include, InsteddBootstrap::ApplicationHelper

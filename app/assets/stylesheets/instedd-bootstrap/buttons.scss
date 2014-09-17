@@ -6,8 +6,8 @@
 
 .button-icon {
   text-decoration: none;
-  color: $black;
   display: inline-block;
+  color: #333333;
 
   &:hover, &:active {
     color:#ff6600
@@ -26,8 +26,13 @@
     @extend .btn-icon.plain;
   }
 
-  &.blue > span:first-child {
-    @extend .btn-icon.blue;
+  &.blue {
+    > span:first-child {
+      @extend .btn-icon.blue;
+    }
+    span {
+      color: #0088cc;
+    }
   }
 
   &.red > span:first-child {
@@ -59,7 +64,6 @@
   @include box-shadow( inset 0 9px 6px rgba(255,255,255,.65), 0 1px 3px rgba(0,0,0,.5));
   @include gradient-vertical(#f1f1f1, #c8c8c8);
   @include box-sizing(border-box);
-  /*line-height: 16px !important;*/
   padding: 0;
   border: 1px solid $white;
   text-align: center;

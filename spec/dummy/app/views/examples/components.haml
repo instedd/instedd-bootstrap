@@ -3,6 +3,42 @@
 
   %hr
 
+  %h3 Text fields
+
+  %input.input-xlarge{:type => "text"}
+
+  %br
+
+  %input.input-xlarge{:type => "text", :readonly => "readonly"}
+
+  %hr
+
+  %h3 Dropdown
+
+  %select.input-xlarge
+    %option{:value => "1"} iLab
+    %option{:value => "2"} Instedd
+    %option{:value => "3"} Manas Technology
+
+  %br
+
+  %select.input-xlarge{:disabled => "disabled"}
+    %option{:value => "1"} iLab
+    %option{:value => "2"} Instedd
+    %option{:value => "3"} Manas Technology
+
+  %hr
+
+  %h3 Text area
+
+  %textarea.span5{:placeholder => "Write your comment here", :rows => "5"}
+
+  %br
+
+  %textarea.span5{:placeholder => "Write your comment here", :disabled => "disabled", :rows => "5"}
+
+  %hr
+
   %h3 Breadcrumbs
 
   .row-fluid

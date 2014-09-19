@@ -41,3 +41,13 @@ textarea[readonly] {
 select {
   @include box-sizing(border-box);
 }
+
+input.email {
+  background: url("instedd-bootstrap/icons/18/grey/message.png") no-repeat 3px 2px #ffffff;
+  padding-left: 25px;
+}
+
+input.password {
+  background: url("instedd-bootstrap/icons/18/grey/lock.png") no-repeat 3px 2px #ffffff;
+  padding-left: 25px;
+}

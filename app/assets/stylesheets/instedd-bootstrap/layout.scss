@@ -224,7 +224,20 @@ body {
 }
 
 
+.app-logo {
+  @include border-radius(50%);
+  background: #eeeeee;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+  margin: 35px auto;
+  width: 100px;
+  height: 100px;
 
+  img {
+    max-width: 100%;
+  }
+}
 
 //
 // CLASSES and HACKS
@@ -234,68 +247,6 @@ body {
 
 a:hover {
   text-decoration: none;
-}
-.ic-blue {
-  @extend .btn;
-  @extend .btn-primary;
-  @include border-radius(5px);
-  @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
-  line-height: 10px !important;
-  padding: 2px 3px;
-  text-align: center;
-  i {
-    @extend .icon-white;
-  }
-}
-.btn-icon {
-  @extend .btn;
-  @include border-radius(4px);
-  @include box-shadow( inset 0 9px 6px rgba(255,255,255,.65), 0 1px 3px rgba(0,0,0,.5));
-  @include gradient-vertical(#f1f1f1, #c8c8c8);
-  @include box-sizing(border-box);
-  /*line-height: 16px !important;*/
-  padding: 0;
-  border: 1px solid $white;
-  text-align: center;
-
-  &.blue {
-    @include gradient-vertical(#4da5e1, #0f577f);
-    @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
-    border: 1px solid #1f86c8;
-  }
-
-  &.red {
-    @include gradient-vertical(#c90000, #870000);
-    @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
-    border: 1px solid #c90000;
-  }
-
-  &.green {
-    @include gradient-vertical(#93cb3b, #5b8616);
-    @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
-    border: 1px solid #8cb748;
-  }
-
-  &.plain {
-    background: $white;
-    border: 1px solid #E1E1E1;
-    @include box-shadow(none);
-  }
-}
-
-.btn-iconlarge {
-  @extend .btn-icon;
-  @include box-shadow( inset 0 9px 20px rgba(255,255,255,.5), 0 1px 3px rgba(0,0,0,.5));
-  line-height: 18px !important;
-  height: 50px;
-  width: 50px;
-
-  &.plain {
-    background: #D3D3D3;
-    line-height: 22px !important;
-    border: none;
-    @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
-  }
 }
 
 .btn-grouped {

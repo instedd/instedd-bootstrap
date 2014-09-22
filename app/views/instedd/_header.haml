@@ -4,7 +4,7 @@
       .row-fluid
         .span3
           %a{:href => root_url}
-            %img.brand{:src => "/assets/instedd-bootstrap/header/InSTEDDPlatform.png"}
+            = image_tag("instedd-bootstrap/header/InSTEDDPlatform.png", :class => 'brand')
         .span6.acenter
           - if content_for?(:top_nav_bar)
             .nav-collapse.collapse

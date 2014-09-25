@@ -69,19 +69,22 @@
   text-align: center;
 
   &.blue {
-    @include gradient-vertical(#4da5e1, #0f577f);
+    @extend .btn-primary;
+    /*@include gradient-vertical(#4da5e1, #0f577f);*/
     @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
     border: 1px solid #1f86c8;
   }
 
   &.red {
-    @include gradient-vertical(#c90000, #870000);
+    @extend .btn-danger;
+    /*@include gradient-vertical(#c90000, #870000);*/
     @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
     border: 1px solid #c90000;
   }
 
   &.green {
-    @include gradient-vertical(#93cb3b, #5b8616);
+    @extend .btn-success;
+    /*@include gradient-vertical(#93cb3b, #5b8616);*/
     @include box-shadow( 0 1px 3px rgba(0,0,0,.5));
     border: 1px solid #8cb748;
   }
@@ -90,6 +93,11 @@
     background: $white;
     border: 1px solid #E1E1E1;
     @include box-shadow(none);
+  }
+  &:hover {
+    @include box-shadow(inset 0 9px 6px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.5));
+    @include gradient-vertical(darken(#f1f1f1, 10%), darken(#c8c8c8, 5%));
+    background-position: 0 0;
   }
 }
 

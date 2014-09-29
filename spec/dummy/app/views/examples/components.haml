@@ -560,7 +560,7 @@
 
   %h3 Collapsible form for
 
-  - collapsible_form_for '#', icon: 'import', title: 'Import application', description: 'Upload an .mba in order to import an application', submit: 'Import', id: 'import-form' do
+  - collapsible_form_for '#', icon: 'import', title: 'Import application', description: 'Upload an .mba in order to import an application', submit: 'Import', id: 'import-form' do |f|
     %input#choose-file{:disabled => "disabled", :placeholder => "Choose File"}/
     .file-upload
       = icon_link_to :'icf-arrow', 'Choose a file', '#'

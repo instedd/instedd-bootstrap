@@ -187,6 +187,46 @@ module InsteddBootstrap
         end
       end
     end
+
+    def collapsible_form_for(url, options)
+      haml_tag :div, class: 'collapsible_form_for_container' do
+        haml_concat icon_link_to "icf-#{options[:icon]}", options[:title], "##{options[:id]}", data: { toggle: 'collapse', target: "##{options[:id]}"}, class: 'expand_button'
+
+        haml_tag :div, id: options[:id], class: 'collapse panel-collapse collapsible' do
+          haml_tag :div, class: 'panel-body' do
+
+            haml_tag :a, data: { toggle: 'collapse', target: "##{options[:id]}"}, class: 'pull-left' do
+              haml_tag :span do
+                haml_tag :i, class: 'icfg-import import-button-collapsed'
+              end
+            end
+
+            haml_tag :span, class: 'action-description pull-left' do
+              haml_tag :span do haml_concat options[:title] end
+              haml_tag :br
+              haml_tag :span do haml_concat options[:description] end
+            end
+
+            haml_tag :hr, style: "clear:both"
+
+            haml_tag :div do
+
+              form = form_tag url, multipart: true, class: 'form-inline' do |f|
+                yield
+                haml_concat link_to 'Cancel', '#', class: 'btn btn-link', data: { toggle: 'collapse', target: "##{options[:id]}"}
+                haml_concat button_tag options[:submit], class: 'btn'
+              end
+
+              haml_concat form
+            end
+          end
+        end
+        haml_tag :br, style: "clear:both"
+
+      end
+    end
+
+
   end
 end
 

@@ -55,6 +55,7 @@
 @import "bootstrap/carousel";
 @import "bootstrap/hero-unit";
 
+
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary
 
@@ -71,3 +72,5 @@
 @import "instedd-bootstrap/tables";
 @import "instedd-bootstrap/sprites";
 @import "instedd-bootstrap/statedisplay";
+@import "instedd-bootstrap/collapsible_form_for";
+

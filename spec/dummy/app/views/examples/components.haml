@@ -554,3 +554,17 @@
           Lorem ipsum dolor sit amet
         - feature_carrousel_item 'Feature 7', image_class: 'icfl-test' do
           Lorem ipsum dolor sit amet
+
+  %br
+  %hr
+
+  %h3 Collapsible form for
+
+  - collapsible_form_for '#', icon: 'import', title: 'Import application', description: 'Upload an .mba in order to import an application', submit: 'Import', id: 'import-form' do
+    %input#choose-file{:disabled => "disabled", :placeholder => "Choose File"}/
+    .file-upload
+      = icon_link_to :'icf-arrow', 'Choose a file', '#'
+      %input.choose{:type => "file"}/
+
+  %br
+  %hr

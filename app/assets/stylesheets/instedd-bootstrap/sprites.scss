@@ -98,6 +98,27 @@ $iconsFInsteddPath:          image-path("instedd-bootstrap/ics-fancy.png") !defa
 .icf-connect            { background-position: -1480px  0; }
 
 
+// FANCY GREY
+// -----
+$iconsFInsteddPath:          image-path("instedd-bootstrap/ics-fancy.png") !default;
+
+[class^="icfg-"],
+[class*=" icfg-"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  @include ie7-restore-right-whitespace();
+  line-height: 20px;
+  vertical-align: text-top;
+  background-image: url($iconsFInsteddPath);
+  background-position: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.icfg-import             { background-position: -580px   -40px; }
+
+
+
 // FANCY LARGE
 // -----------
 $iconsFLInsteddPath:          image-path("instedd-bootstrap/ics-fancy-large.png") !default;

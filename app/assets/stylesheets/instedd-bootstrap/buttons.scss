@@ -30,9 +30,7 @@
     > span:first-child {
       @extend .btn-icon.blue;
     }
-    span {
-      color: #0088cc;
-    }
+    color: #0088cc;
   }
 
   &.red > span:first-child {

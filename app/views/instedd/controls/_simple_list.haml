@@ -4,9 +4,9 @@
       %th
         = title
         - if create_path
-          %a.pull-right{:href => create_path}
+          %a.button-icon.blue.pull-right{:href => create_path}
             = "Create #{key.to_s.humanize.downcase}"
-            .btn-icon.blue
+            %span.btn-icon
               %i.icc-add
   %tbody
     = yield

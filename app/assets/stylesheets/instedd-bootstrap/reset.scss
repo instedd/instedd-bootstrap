@@ -34,12 +34,24 @@ h1, h2, h3, h4, h5, h6 {
   // Hover/focus state
   &:hover,
   &:focus {
-    background-position: 0 -15px;
+    background-position: 0 0;
 
   }
 }
 
 
+.btn-group.open .btn.dropdown-toggle {
+  @include border-radius (4px 4px 0 0);
+  @include box-shadow (0px 1px 2px 1px rgba(0, 0, 0, 0.2));
+  background-color: #ffffff;
+}
+
+.dropdown-menu {
+  @include border-radius ( 4px 0 4px 4px);
+  @include box-shadow (0px 1px 2px 1px rgba(0, 0, 0, 0.2));
+  margin: 0;
+  border: none;
+}
 
 // Button Sizes
 // --------------------------------------------------

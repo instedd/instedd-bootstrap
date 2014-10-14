@@ -168,14 +168,21 @@ module InsteddBootstrap
 
     def icon_link_to(icon, body, url, html_options = {})
       html_options[:class] = "btn-icon #{html_options[:class]}"
+      before = html_options.delete :before
 
       link_to url, html_options do
-        haml_tag :span, class: 'ic-wrapper' do
-          haml_tag :i, :<, class: icon do
+        if before and before.present?
+          haml_tag :span, :< do
+            haml_concat h(before)
           end
         end
-        haml_tag :span, :< do
-          haml_concat h(body)
+        haml_tag :span, class: 'ic-wrapper' do
+          haml_tag :i, :<, class: icon
+        end
+        if body and body.present?
+          haml_tag :span, :< do
+            haml_concat h(body)
+          end
         end
       end
     end

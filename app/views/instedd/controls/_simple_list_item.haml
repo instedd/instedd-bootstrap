@@ -2,7 +2,6 @@
   %td
     - if path
       = link_to text, path
-      = link_to path, :class => "btn-icon pull-right" do
-        %i.icf-arrow
+      = icon_link_to :'icf-arrow', '', path, class: 'pull-right'
     - else
       = text

@@ -4,10 +4,7 @@
       %th
         = title
         - if create_path
-          %a.button-icon.blue.pull-right{:href => create_path}
-            = "Create #{key.to_s.humanize.downcase}"
-            %span.btn-icon
-              %i.icc-add
+          = icon_link_to :'icc-add', '', create_path, class: 'blue pull-right', before: "Create #{key.to_s.humanize.downcase}"
   %tbody
     = yield
 

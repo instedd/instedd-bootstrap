@@ -195,6 +195,12 @@ module InsteddBootstrap
       end
     end
 
+    def render_errors(resource)
+      if resource.errors.any?
+        concat (render "instedd/controls/form_errors.haml", :resource => resource)
+      end
+    end
+
     def collapsible_form_for(url, options)
       haml_tag :div, class: 'collapsible_form_for_container' do
         haml_concat icon_link_to "icf-#{options[:icon]}", options[:title], "##{options[:id]}", data: { toggle: 'collapse', target: "##{options[:id]}"}, class: 'expand_button'

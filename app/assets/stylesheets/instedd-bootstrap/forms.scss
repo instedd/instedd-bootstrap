@@ -23,7 +23,7 @@ input[type="color"],
   @include box-sizing(border-box);
   border: 1px solid #dddddd;
   padding: 0 2px;
-  color: black;
+  color: $black;
   min-height: 26px;
 }
 
@@ -75,3 +75,43 @@ input.password {
   list-style-position: inside;
 }
 
+// Overriding bootstrap classes for showing errors
+
+.control-group.error {
+  input, select, textarea {
+    color: black;
+  }
+}
+
+// Shared size and type resets
+.control-group.error{
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  .uneditable-input {
+    margin-bottom: 0px;;
+  }
+}
+
+.control-group.error .help-inline {
+  padding-left: 0px;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: $black;
+}

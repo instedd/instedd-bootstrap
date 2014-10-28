@@ -133,3 +133,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #555555 !important;
 }
 
+//
+// Forms
+// --------------------------------------------------
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+  margin-top: 1px;
+}

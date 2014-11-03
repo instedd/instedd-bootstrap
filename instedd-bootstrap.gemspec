@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-sass', '~> 2.3.2'
   s.add_dependency "rails"
   s.add_dependency 'sass-rails'
-  s.add_dependency 'bootstrap-sass'
 
   s.add_development_dependency 'sass', '3.4.1'
   s.add_development_dependency 'haml-rails'

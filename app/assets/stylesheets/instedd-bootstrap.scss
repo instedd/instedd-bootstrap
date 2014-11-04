@@ -57,6 +57,7 @@
 
 // Theme Stylesheets
 @import "instedd-bootstrap/reset";
+@import "instedd-bootstrap/well";
 @import "instedd-bootstrap/layout";
 @import "instedd-bootstrap/home";
 @import "instedd-bootstrap/navmenu";
@@ -68,7 +69,6 @@
 @import "instedd-bootstrap/sprites";
 @import "instedd-bootstrap/statedisplay";
 @import "instedd-bootstrap/collapsible_form_for";
-@import "instedd-bootstrap/well";
 
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary

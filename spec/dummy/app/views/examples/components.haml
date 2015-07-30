@@ -535,6 +535,43 @@
 
   .row-fluid
     .span12
+      %h3 Button dropdown menus
+
+      .btn-group
+        %button.btn.dropdown-toggle(data-toggle="dropdown")
+          Action
+          %span.caret
+        %ul.dropdown-menu
+          %li
+            %a(href="#") Action
+          %li
+            %a(href="#") Another action
+          %li.divider
+          %li
+            %a(href="#") Separated link
+
+      - ["blue", "red", "green", "flat"].each do |color_class|
+        .btn-group
+          = icon_link_to :'icc-add', 'Add Service', '#', class: "btn btn-link #{color_class} dropdown-toggle", :'data-toggle' => "dropdown"
+          %ul.dropdown-menu
+            %li
+              %a(href="#")
+                %i.icf-facebook
+                %span Facebook
+            %li
+              %a(href="#")
+                %i.icf-twitter
+                %span Twitter
+            %li
+              %a(href="#")
+                %i.icf-rss
+                %span Feed
+
+  %br
+  %hr
+
+  .row-fluid
+    .span12
       %h3 Carrousel for home page
 
       - feature_carrousel do

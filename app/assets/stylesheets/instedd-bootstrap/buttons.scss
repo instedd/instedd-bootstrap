@@ -37,7 +37,7 @@
     background-position: 0 0 !important;
   }
 
-  &:active .ic-wrapper {
+  &:active .ic-wrapper, .btn-group.open & .ic-wrapper {
     background: #d0d0d0;
     @include box-shadow(inset 0.5px 0.866px 1px 0px rgba(0, 0, 0, 0.4)!important);
     border-color: #d0d0d0;
@@ -56,7 +56,7 @@
     &:hover .ic-wrapper {
       @include gradient-vertical(darken($btnPrimaryBackground, 7%), darken($btnPrimaryBackgroundHighlight, 5%));
     }
-    &:active .ic-wrapper {
+    &:active .ic-wrapper, .btn-group.open & .ic-wrapper  {
       background: darken($btnPrimaryBackground, 12%);
     }
   }
@@ -70,7 +70,7 @@
     &:hover .ic-wrapper {
       @include gradient-vertical(darken($btnDangerBackground, 7%), darken($btnDangerBackgroundHighlight, 5%));
     }
-    &:active .ic-wrapper {
+    &:active .ic-wrapper, .btn-group.open & .ic-wrapper  {
       background: $btnDangerBackground;
     }
   }
@@ -84,7 +84,7 @@
     &:hover .ic-wrapper {
       @include gradient-vertical(darken($btnSuccessBackground, 7%), darken($btnSuccessBackgroundHighlight, 5%));
     }
-    &:active .ic-wrapper {
+    &:active .ic-wrapper, .btn-group.open & .ic-wrapper  {
       background: $btnSuccessBackground;
     }
   }
@@ -104,5 +104,11 @@
     &:hover .ic-wrapper {
       background: darken(#d0d0d0, 6%);
     }
+  }
+}
+
+.btn-link {
+  &.dropdown-toggle:hover, &.dropdown-toggle:focus, &.dropdown-toggle:active, .open & {
+    text-decoration: none;
   }
 }

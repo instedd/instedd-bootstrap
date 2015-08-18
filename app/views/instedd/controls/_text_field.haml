@@ -1,0 +1,7 @@
+.control-group{class: "#{'error' if f.object.errors.has_key?(attribute)}"}
+  = f.label attribute
+  .controls
+    = f.text_field attribute, options[:input]
+    - if f.object.errors.has_key?(attribute)
+      %span.help-inline
+        = f.object.errors.get(attribute).join(', ')

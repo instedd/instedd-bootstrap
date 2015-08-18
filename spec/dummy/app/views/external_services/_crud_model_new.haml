@@ -1,0 +1,8 @@
+= form_for model, remote: true do |f|
+
+  = f.ibs_text_field :url, input: { class: 'span6', placeholder: "http://example.com/manifext.json" }
+
+  %hr
+
+  = f.ibs_submit 'Save'
+  - crud_list_cancel

@@ -136,6 +136,73 @@ module InsteddBootstrap
       concat render("instedd/controls/simple_list_item", text: text, path: path)
     end
 
+    def crud_list(key, options)
+      create_partial = options[:create_partial] || 'crud_model_new'
+      create_model = options[:create_model] || key.to_s.camelize.constantize.new
+
+      items_partial = options[:items_partial] || 'crud_model_form'
+      title = "Add #{key.to_s.humanize.titleize}"
+
+      options[:items].each do |item|
+        concat(render(items_partial, {model: item}))
+      end
+
+      locals = {
+        title: title,
+        create_id: "create-#{key}",
+        create_partial: create_partial,
+        create_model: create_model
+      }
+      concat(render("instedd/controls/crud_list_add", locals))
+    end
+
+    def crud_list_item(key, model, options, &block)
+      body = capture(&block) if block_given?
+
+      title = options[:title]
+      if title.is_a?(Symbol)
+        title_was = "#{title}_was".to_sym
+        # due to validations, if collapsing is better to show the saved attribute
+        title = model.send(model.respond_to?(title_was) ? title_was : title)
+      end
+
+      concat(render("instedd/controls/crud_list_item", {
+        item_id: "item-#{key}-#{model.id}",
+        model: model,
+        title: title,
+        body: body,
+        expanded: !model.valid?
+      }))
+    end
+
+    def crud_list_cancel
+      haml_tag :button, "Cancel", type: "reset", class: "btn btn-link", onclick: "$(this).closest('.collapse').collapse('hide')"
+    end
+
+    def crud_list_append(key, model, partial = 'crud_model_form', create_partial = 'crud_model_new', create_model = nil)
+      create_model ||= key.to_s.camelize.constantize.new
+      { partial: 'instedd/controls/crud_list_append', locals: {
+          partial: partial,
+          model: model,
+          create_id: "create-#{key}",
+          create_partial: create_partial,
+          create_model: create_model
+          }
+      }
+    end
+
+    def crud_list_new(key, model, partial = 'crud_model_new')
+      { partial: 'instedd/controls/crud_list_new', locals: { create_id: "create-#{key}", partial: partial, model: model } }
+    end
+
+    def crud_list_update(key, model, partial = 'crud_model_form')
+      { partial: 'instedd/controls/crud_list_update', locals: { item_id: "item-#{key}-#{model.id}", partial: partial, model: model } }
+    end
+
+    def crud_list_remove(key, model)
+      { partial: 'instedd/controls/crud_list_remove', locals: { item_id: "item-#{key}-#{model.id}" } }
+    end
+
     def flash_message
       res = nil
 

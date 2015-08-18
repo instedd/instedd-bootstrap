@@ -1,0 +1,8 @@
+.collapse{id: create_id}
+  .box-list.box-list-edit.create_partial
+    = render create_partial, model: create_model
+
+.box-list{:'data-ibs-clickable' => 'a'}
+  %p= title
+  .pull-right
+    = icon_link_to :'icc-add', '', 'javascript:', {:class => 'blue', :'data-toggle'=>"collapse", :'data-target'=>"##{create_id}"}

@@ -1,0 +1,11 @@
+.crud-list-item.ibs-xor-collapse{id: item_id}
+  .collapse{class: "#{'in' unless expanded}"}
+    .box-list{:'data-ibs-clickable' => 'a'}
+      %p= title || raw("&nbsp;")
+
+      .pull-right
+        = icon_link_to :'icf-arrow', '', 'javascript:', onclick: "$(this).closest('.collapse').collapse('hide')"
+
+  .collapse{class: "#{'in' if expanded}"}
+    .box-list.box-list-edit
+      = body

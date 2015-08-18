@@ -1,3 +1,16 @@
+*[data-ibs-clickable] {
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.ibs-xor-collapse > .collapse {
+  transition: height 0.01s;
+
+  &.in {
+    overflow: visible;
+  }
+}
+
 //
 // Collapsible form for
 // --------------------------------------------------

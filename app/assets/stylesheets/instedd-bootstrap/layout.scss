@@ -325,11 +325,17 @@ ul.clist {
   padding: 10px;
   margin-bottom: 10px;
 
-  P {
+  p {
     display: inline-block;
-    vertical-align: top;
-    width: 95%;
-    margin-left: 5PX;
+    margin: 4px 0;
+  }
+
+  form {
+    margin-bottom: 0px;
+  }
+
+  &.box-list-edit {
+    background: #cce2f1;
   }
 }
 

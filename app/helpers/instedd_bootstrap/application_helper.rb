@@ -166,13 +166,17 @@ module InsteddBootstrap
         title = model.send(model.respond_to?(title_was) ? title_was : title)
       end
 
+      item_id = "item-#{key}-#{model.id}"
+
       concat(render("instedd/controls/crud_list_item", {
-        item_id: "item-#{key}-#{model.id}",
+        item_id: item_id,
         model: model,
         title: title,
         body: body,
-        expanded: !model.valid?
+        expanded: (Thread.current[:crud_list_expanded] == item_id ? true : !model.valid?)
       }))
+
+      Thread.current[:crud_list_expanded] = nil
     end
 
     def crud_list_cancel
@@ -195,8 +199,15 @@ module InsteddBootstrap
       { partial: 'instedd/controls/crud_list_new', locals: { create_id: "create-#{key}", partial: partial, model: model } }
     end
 
-    def crud_list_update(key, model, partial = 'crud_model_form')
-      { partial: 'instedd/controls/crud_list_update', locals: { item_id: "item-#{key}-#{model.id}", partial: partial, model: model } }
+    def crud_list_update(key, model, options = {}, partial = 'crud_model_form')
+      item_id = "item-#{key}-#{model.id}"
+      if options[:expanded] || !model.valid? || false
+        Thread.current[:crud_list_expanded] = item_id
+      else
+        Thread.current[:crud_list_expanded] = nil
+      end
+
+      { partial: 'instedd/controls/crud_list_update', locals: { item_id: item_id, partial: partial, model: model } }
     end
 
     def crud_list_remove(key, model)

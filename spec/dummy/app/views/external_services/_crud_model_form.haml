@@ -7,6 +7,8 @@
     = f.ibs_text_field :name, input: { class: 'span6', placeholder: "Name" }
     = f.ibs_text_field :url, input: { class: 'span6', placeholder: "http://example.com/manifext.json" }
 
+    = icon_link_to :'icf-sync', 'Reload', reload_external_service_path(model), method: :post, remote: true
+
     %hr
 
     = f.ibs_submit 'Save'

@@ -22,7 +22,11 @@ Rails.application.routes.draw do
   get "home/index" => "home#index"
   get "examples/:view" => "examples#show", as: 'example', :constraints => { :view => /.+/ }
 
-  resources :external_services
+  resources :external_services do
+    member do
+      post :reload
+    end
+  end
 
   root to: 'home#index'
 

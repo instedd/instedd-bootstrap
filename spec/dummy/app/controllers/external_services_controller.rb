@@ -1,4 +1,6 @@
 class ExternalServicesController < ApplicationController
+  crud_list_options :external_service, title: :name
+
   def index
     @external_services = ExternalService.all
   end

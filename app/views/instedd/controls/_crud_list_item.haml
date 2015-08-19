@@ -1,11 +1,12 @@
-.crud-list-item.ibs-xor-collapse{id: item_id}
+- expanded = true if !model.valid?
+.crud-list-item.ibs-xor-collapse{id: controller._crud_item_id(key, model)}
   .collapse{class: "#{'in' unless expanded}"}
     .box-list{:'data-ibs-clickable' => 'a'}
-      %p= title || raw("&nbsp;")
+      %p= controller._crud_list_title(key, model) || raw("&nbsp;")
 
       .pull-right
         = icon_link_to :'icf-arrow', '', 'javascript:', onclick: "$(this).closest('.collapse').collapse('hide')"
 
   .collapse{class: "#{'in' if expanded}"}
     .box-list.box-list-edit
-      = body
+      = render controller._crud_list_option(key, :edit), { model: model }

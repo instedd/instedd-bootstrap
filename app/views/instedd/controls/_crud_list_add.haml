@@ -1,6 +1,7 @@
+- create_id = controller._crud_create_id(key)
 .collapse{id: create_id}
   .box-list.box-list-edit.create_partial
-    = render create_partial, model: create_model
+    = render controller._crud_list_option(key, :new), model: create_model
 
 .box-list{:'data-ibs-clickable' => 'a'}
   %p= title

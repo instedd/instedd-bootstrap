@@ -22,6 +22,7 @@ module InsteddBootstrap
     config.to_prepare do
       require_dependency InsteddBootstrap::Engine.root.join('app', 'helpers', 'instedd_bootstrap', 'application_helper').to_s
       require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'breadcrumbs').to_s
+      require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'crud_lists').to_s
       require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'form_builder').to_s
     end
 

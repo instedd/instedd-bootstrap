@@ -1,5 +1,5 @@
 - create_id = controller._crud_create_id(key)
-.collapse{id: create_id}
+.crud-list-add.collapse{id: create_id}
   .box-list.box-list-edit.create_partial
     = render controller._crud_list_option(key, :new), model: create_model
 

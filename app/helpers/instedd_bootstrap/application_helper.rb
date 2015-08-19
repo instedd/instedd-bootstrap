@@ -259,6 +259,12 @@ module InsteddBootstrap
       end
     end
 
+    def instedd_form_for(record_or_name_or_array, *args, &proc)
+      options = args.extract_options!
+      form_for(record_or_name_or_array, *(args << options.merge(:builder => InsteddFormBuilder))) do |f|
+        capture(f, &proc)
+      end
+    end
 
   end
 end

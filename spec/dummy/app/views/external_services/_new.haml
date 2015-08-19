@@ -1,8 +1,8 @@
-= form_for model, remote: true do |f|
+= instedd_form_for model, remote: true do |f|
 
-  = f.ibs_text_field :url, input: { class: 'span6', placeholder: "http://example.com/manifext.json" }
+  = f.text_field :url, input: { class: 'span6', placeholder: "http://example.com/manifext.json" }
 
   %hr
 
-  = f.ibs_submit 'Save'
+  = f.submit 'Save'
   - crud_list_cancel

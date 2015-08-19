@@ -1,14 +1,14 @@
 .pull-right
   = icon_link_to :'icf-delete', '', external_service_path(model), method: :delete, remote: true, :'data-confirm' => 'Sure?'
 
-= form_for model, remote: true do |f|
+= instedd_form_for model, remote: true do |f|
 
-  = f.ibs_text_field :name, input: { class: 'span6', placeholder: "Name" }
-  = f.ibs_text_field :url, input: { class: 'span6', placeholder: "http://example.com/manifext.json" }
+  = f.text_field :name, input: { class: 'span6', placeholder: "Name" }
+  = f.text_field :url, input: { class: 'span6', placeholder: "http://example.com/manifext.json" }
 
   = icon_link_to :'icf-sync', 'Reload', reload_external_service_path(model), method: :post, remote: true
 
   %hr
 
-  = f.ibs_submit 'Save'
+  = f.submit 'Save'
   - crud_list_cancel

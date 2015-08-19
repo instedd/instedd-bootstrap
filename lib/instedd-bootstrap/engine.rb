@@ -23,7 +23,7 @@ module InsteddBootstrap
       require_dependency InsteddBootstrap::Engine.root.join('app', 'helpers', 'instedd_bootstrap', 'application_helper').to_s
       require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'breadcrumbs').to_s
       require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'crud_lists').to_s
-      require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'form_builder').to_s
+      require_dependency InsteddBootstrap::Engine.root.join('lib', 'instedd-bootstrap', 'instedd_form_builder').to_s
     end
 
     if Rails.env.development?

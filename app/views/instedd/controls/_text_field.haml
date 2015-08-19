@@ -1,7 +1,7 @@
-.control-group{class: "#{'error' if f.object.errors.has_key?(attribute)}"}
-  = f.label attribute
+.control-group{class: "#{'error' if f.object.respond_to?(:errors) && f.object.errors.has_key?(attribute)}"}
+  = f.label options[:label].try { |l| l[:text] } || attribute
   .controls
     = f.text_field attribute, options[:input]
-    - if f.object.errors.has_key?(attribute)
+    - if f.object.respond_to?(:errors) && f.object.errors.has_key?(attribute)
       %span.help-inline
         = f.object.errors.get(attribute).join(', ')

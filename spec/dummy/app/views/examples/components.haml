@@ -43,8 +43,17 @@
 
   .row-fluid
     .span6
-
+      %p Default
       - breadcrumb do
+        - breadcrumb_item 'Root', '#'
+        - breadcrumb_item 'Item', '#'
+        - breadcrumb_item 'Detail'
+
+
+  .row-fluid
+    .span6
+      %p Flat
+      - breadcrumb_flat do
         - breadcrumb_item 'Root', '#'
         - breadcrumb_item 'Item', '#'
         - breadcrumb_item 'Detail'

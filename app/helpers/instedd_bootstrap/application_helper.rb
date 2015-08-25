@@ -49,6 +49,21 @@ module InsteddBootstrap
       end
     end
 
+    def breadcrumb_flat
+      haml_tag :ul, class: "breadcrumb flat" do
+        @breadcrumb_items = []
+        yield
+
+        @breadcrumb_items.each_with_index do |item, index|
+          if index == @breadcrumb_items.length - 1
+            _breadcrumb_last_item item[:text]
+          else
+            _breadcrumb_item item[:text], item[:path]
+          end
+        end
+      end
+    end
+
     def breadcrumb_item(text, path = nil)
       @breadcrumb_items << { text: text, path: path }
     end

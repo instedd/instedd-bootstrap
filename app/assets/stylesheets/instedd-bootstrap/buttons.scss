@@ -112,3 +112,30 @@
     text-decoration: none;
   }
 }
+
+.btn-power {
+  background-image: url(image-path("instedd-bootstrap/power/on_off.png"));
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+  width: 50px;
+  height: 20px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.on {
+    background-position: left top;
+
+    &:hover {
+      background-position: left bottom;
+    }
+  }
+
+  &.off {
+    background-position: right top;
+
+    &:hover {
+      background-position: right bottom;
+    }
+  }
+}

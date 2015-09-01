@@ -153,23 +153,24 @@ input[type="checkbox"].on-off {
     text-decoration: none;
     cursor: pointer;
 
-    &:hover {
-      background-position: right bottom;
+    &:active {
+      background-position: right -25px;
     }
 
   }
   &:checked + label {
     background-position: left top;
 
-    &:hover {
-      background-position: left bottom;
+    &:active {
+      background-position: left -25px;
     }
   }
   &.disabled + label,
   &[disabled] + label,
   fieldset[disabled]  + label {
     cursor: not-allowed;
+    background-position-y: bottom;
     pointer-events: none; // Future-proof disabling of clicks
-    opacity: .2;
+    opacity: .75;
   }
 }

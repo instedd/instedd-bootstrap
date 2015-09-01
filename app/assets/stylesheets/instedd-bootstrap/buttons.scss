@@ -139,3 +139,30 @@
     }
   }
 }
+
+input[type="checkbox"].on-off {
+  display: none;
+
+  & + label{
+    background: url(image-path("instedd-bootstrap/power/on_off.png")) no-repeat left top;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    width: 50px;
+    height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-position: left bottom;
+    }
+
+  }
+  &:checked + label {
+    background-position: right top;
+
+    &:hover {
+      background-position: right bottom;
+    }
+  }
+}

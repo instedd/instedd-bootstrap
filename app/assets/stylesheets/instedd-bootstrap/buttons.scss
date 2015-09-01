@@ -144,9 +144,9 @@ input[type="checkbox"].on-off {
   display: none;
 
   & + label{
-    background: url(image-path("instedd-bootstrap/power/on_off.png")) no-repeat left top;
-    display: inline-block;
+    background: url(image-path("instedd-bootstrap/power/on_off.png")) no-repeat right top;
     line-height: 20px;
+    display: inline-block;
     vertical-align: middle;
     width: 50px;
     height: 20px;
@@ -154,15 +154,22 @@ input[type="checkbox"].on-off {
     cursor: pointer;
 
     &:hover {
-      background-position: left bottom;
+      background-position: right bottom;
     }
 
   }
   &:checked + label {
-    background-position: right top;
+    background-position: left top;
 
     &:hover {
-      background-position: right bottom;
+      background-position: left bottom;
     }
+  }
+  &.disabled + label,
+  &[disabled] + label,
+  fieldset[disabled]  + label {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: .2;
   }
 }
